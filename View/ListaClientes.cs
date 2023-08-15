@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace DesafioCRUD.View
 {
-    public partial class formCadastrar : Form
+    public partial class ListaClientes : Form
     {
-        public formCadastrar()
+        public ListaClientes()
         {
             InitializeComponent();
         }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using DesafioCRUD.Controller;
+using DesafioCRUD.View;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +17,14 @@ namespace DesafioCRUD
         public FormHome()
         {
             InitializeComponent();
+        }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            var formDados = new formDadosCliente();
+
+            formDados.ShowDialog();
+
         }
     }
 }
