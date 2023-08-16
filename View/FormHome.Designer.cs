@@ -38,9 +38,9 @@
             this.btnCadastrar.FlatAppearance.BorderSize = 0;
             this.btnCadastrar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCadastrar.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.btnCadastrar.ForeColor = System.Drawing.SystemColors.Control;
             this.btnCadastrar.IconChar = FontAwesome.Sharp.IconChar.UserPlus;
-            this.btnCadastrar.IconColor = System.Drawing.Color.Black;
+            this.btnCadastrar.IconColor = System.Drawing.Color.White;
             this.btnCadastrar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnCadastrar.IconSize = 70;
             this.btnCadastrar.Location = new System.Drawing.Point(221, 203);

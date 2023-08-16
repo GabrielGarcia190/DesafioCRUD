@@ -59,13 +59,12 @@
     <Compile Include="ConexaoBanco.cs" />
     <Compile Include="Controller\CadastrarCliente.cs" />
     <Compile Include="Controller\ListarClientes.cs" />
-    <Compile Include="Enums\Genero.cs" />
     <Compile Include="Model\Cliente.cs" />
-    <Compile Include="View\CadastrarCliente.cs">
+    <Compile Include="View\DadosCliente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="View\CadastrarCliente.Designer.cs">
-      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    <Compile Include="View\DadosCliente.Designer.cs">
+      <DependentUpon>DadosCliente.cs</DependentUpon>
     </Compile>
     <Compile Include="View\FormHome.cs">
       <SubType>Form</SubType>
@@ -81,8 +80,8 @@
     <Compile Include="View\ListaClientes.Designer.cs">
       <DependentUpon>ListaClientes.cs</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="View\CadastrarCliente.resx">
-      <DependentUpon>CadastrarCliente.cs</DependentUpon>
+    <EmbeddedResource Include="View\DadosCliente.resx">
+      <DependentUpon>DadosCliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="View\FormHome.resx">
       <DependentUpon>FormHome.cs</DependentUpon>
@@ -113,6 +112,9 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="Helpers\" />
+    <Folder Include="Repositories\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

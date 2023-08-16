@@ -57,7 +57,8 @@
             this.cbUF = new System.Windows.Forms.ComboBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnVoltar = new FontAwesome.Sharp.IconButton();
-            this.label12 = new System.Windows.Forms.Label();
+            this.lblTitulo = new System.Windows.Forms.Label();
+            this.checkAtivo = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.numIdade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
@@ -365,22 +366,39 @@
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
-            // label12
+            // lblTitulo
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Montserrat SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(78, 17);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(256, 29);
-            this.label12.TabIndex = 12;
-            this.label12.Text = "Adicionar novo cliente";
+            this.lblTitulo.AutoSize = true;
+            this.lblTitulo.Font = new System.Drawing.Font("Montserrat SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitulo.Location = new System.Drawing.Point(78, 17);
+            this.lblTitulo.Name = "lblTitulo";
+            this.lblTitulo.Size = new System.Drawing.Size(256, 29);
+            this.lblTitulo.TabIndex = 12;
+            this.lblTitulo.Text = "Adicionar novo cliente";
+            // 
+            // checkAtivo
+            // 
+            this.checkAtivo.AutoSize = true;
+            this.checkAtivo.Checked = true;
+            this.checkAtivo.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkAtivo.Enabled = false;
+            this.checkAtivo.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.checkAtivo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.checkAtivo.Location = new System.Drawing.Point(695, 29);
+            this.checkAtivo.Name = "checkAtivo";
+            this.checkAtivo.Size = new System.Drawing.Size(75, 27);
+            this.checkAtivo.TabIndex = 13;
+            this.checkAtivo.Text = "Ativo";
+            this.checkAtivo.UseVisualStyleBackColor = true;
+            this.checkAtivo.Visible = false;
             // 
             // formDadosCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.label12);
+            this.Controls.Add(this.checkAtivo);
+            this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.cbUF);
             this.Controls.Add(this.btnLimpar);
@@ -447,6 +465,7 @@
         private System.Windows.Forms.ComboBox cbUF;
         private System.Windows.Forms.BindingSource bindingSource1;
         private FontAwesome.Sharp.IconButton btnVoltar;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label lblTitulo;
+        private System.Windows.Forms.CheckBox checkAtivo;
     }
 }
