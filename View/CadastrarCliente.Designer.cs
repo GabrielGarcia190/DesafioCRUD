@@ -28,33 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.txtNomeCliente = new System.Windows.Forms.TextBox();
             this.txtSobrenomeCliente = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.txtNomeRua = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.numIdade = new System.Windows.Forms.NumericUpDown();
             this.label3 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cbGenero = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.maskedTextBox1 = new System.Windows.Forms.MaskedTextBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.txtTelefone = new System.Windows.Forms.MaskedTextBox();
+            this.dtpDateNasc = new System.Windows.Forms.DateTimePicker();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.maskedTextBox2 = new System.Windows.Forms.MaskedTextBox();
+            this.mtbCEP = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.maskedTextBox3 = new System.Windows.Forms.MaskedTextBox();
+            this.txtNumCasa = new System.Windows.Forms.TextBox();
+            this.txtBairo = new System.Windows.Forms.TextBox();
+            this.txtCidade = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btnSalvar = new FontAwesome.Sharp.IconButton();
             this.button1 = new System.Windows.Forms.Button();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.cbUF = new System.Windows.Forms.ComboBox();
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.label12 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.numIdade)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // txtNomeCliente
@@ -71,15 +76,15 @@
             this.txtSobrenomeCliente.Location = new System.Drawing.Point(83, 172);
             this.txtSobrenomeCliente.Name = "txtSobrenomeCliente";
             this.txtSobrenomeCliente.Size = new System.Drawing.Size(672, 27);
-            this.txtSobrenomeCliente.TabIndex = 3;
+            this.txtSobrenomeCliente.TabIndex = 2;
             // 
-            // textBox7
+            // txtNomeRua
             // 
-            this.textBox7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox7.Location = new System.Drawing.Point(83, 344);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(388, 27);
-            this.textBox7.TabIndex = 0;
+            this.txtNomeRua.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNomeRua.Location = new System.Drawing.Point(83, 344);
+            this.txtNomeRua.Name = "txtNomeRua";
+            this.txtNomeRua.Size = new System.Drawing.Size(388, 27);
+            this.txtNomeRua.TabIndex = 7;
             // 
             // label1
             // 
@@ -101,14 +106,14 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Sobrenome:";
             // 
-            // numericUpDown1
+            // numIdade
             // 
-            this.numericUpDown1.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.numericUpDown1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numericUpDown1.Location = new System.Drawing.Point(454, 258);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(133, 27);
-            this.numericUpDown1.TabIndex = 2;
+            this.numIdade.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
+            this.numIdade.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numIdade.Location = new System.Drawing.Point(454, 258);
+            this.numIdade.Name = "numIdade";
+            this.numIdade.Size = new System.Drawing.Size(133, 27);
+            this.numIdade.TabIndex = 5;
             // 
             // label3
             // 
@@ -120,18 +125,18 @@
             this.label3.TabIndex = 1;
             this.label3.Text = "Idade:";
             // 
-            // comboBox1
+            // cbGenero
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.cbGenero.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbGenero.FormattingEnabled = true;
+            this.cbGenero.Items.AddRange(new object[] {
+            "Feminino",
             "Masculino",
-            "Femino",
             "Outros"});
-            this.comboBox1.Location = new System.Drawing.Point(618, 256);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(137, 30);
-            this.comboBox1.TabIndex = 4;
+            this.cbGenero.Location = new System.Drawing.Point(618, 256);
+            this.cbGenero.Name = "cbGenero";
+            this.cbGenero.Size = new System.Drawing.Size(137, 30);
+            this.cbGenero.TabIndex = 6;
             // 
             // label4
             // 
@@ -153,23 +158,23 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "Telefone:";
             // 
-            // maskedTextBox1
+            // txtTelefone
             // 
-            this.maskedTextBox1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox1.Location = new System.Drawing.Point(83, 259);
-            this.maskedTextBox1.Mask = "(99)99999-9999";
-            this.maskedTextBox1.Name = "maskedTextBox1";
-            this.maskedTextBox1.Size = new System.Drawing.Size(122, 27);
-            this.maskedTextBox1.TabIndex = 5;
+            this.txtTelefone.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTelefone.Location = new System.Drawing.Point(83, 259);
+            this.txtTelefone.Mask = "(99)99999-9999";
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(122, 27);
+            this.txtTelefone.TabIndex = 4;
             // 
-            // dateTimePicker1
+            // dtpDateNasc
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dateTimePicker1.Location = new System.Drawing.Point(246, 258);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(172, 27);
-            this.dateTimePicker1.TabIndex = 6;
+            this.dtpDateNasc.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtpDateNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
+            this.dtpDateNasc.Location = new System.Drawing.Point(246, 258);
+            this.dtpDateNasc.Name = "dtpDateNasc";
+            this.dtpDateNasc.Size = new System.Drawing.Size(172, 27);
+            this.dtpDateNasc.TabIndex = 4;
             // 
             // label6
             // 
@@ -191,14 +196,14 @@
             this.label7.TabIndex = 1;
             this.label7.Text = "Rua:";
             // 
-            // maskedTextBox2
+            // mtbCEP
             // 
-            this.maskedTextBox2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox2.Location = new System.Drawing.Point(650, 344);
-            this.maskedTextBox2.Mask = "99999-999";
-            this.maskedTextBox2.Name = "maskedTextBox2";
-            this.maskedTextBox2.Size = new System.Drawing.Size(105, 27);
-            this.maskedTextBox2.TabIndex = 7;
+            this.mtbCEP.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.mtbCEP.Location = new System.Drawing.Point(650, 344);
+            this.mtbCEP.Mask = "99999-999";
+            this.mtbCEP.Name = "mtbCEP";
+            this.mtbCEP.Size = new System.Drawing.Size(105, 27);
+            this.mtbCEP.TabIndex = 9;
             // 
             // label8
             // 
@@ -210,29 +215,29 @@
             this.label8.TabIndex = 1;
             this.label8.Text = "Número:";
             // 
-            // textBox1
+            // txtNumCasa
             // 
-            this.textBox1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(508, 344);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(98, 27);
-            this.textBox1.TabIndex = 0;
+            this.txtNumCasa.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNumCasa.Location = new System.Drawing.Point(508, 344);
+            this.txtNumCasa.Name = "txtNumCasa";
+            this.txtNumCasa.Size = new System.Drawing.Size(98, 27);
+            this.txtNumCasa.TabIndex = 8;
             // 
-            // textBox2
+            // txtBairo
             // 
-            this.textBox2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(83, 418);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(300, 27);
-            this.textBox2.TabIndex = 0;
+            this.txtBairo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBairo.Location = new System.Drawing.Point(83, 418);
+            this.txtBairo.Name = "txtBairo";
+            this.txtBairo.Size = new System.Drawing.Size(300, 27);
+            this.txtBairo.TabIndex = 10;
             // 
-            // maskedTextBox3
+            // txtCidade
             // 
-            this.maskedTextBox3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.maskedTextBox3.Location = new System.Drawing.Point(431, 418);
-            this.maskedTextBox3.Name = "maskedTextBox3";
-            this.maskedTextBox3.Size = new System.Drawing.Size(205, 27);
-            this.maskedTextBox3.TabIndex = 7;
+            this.txtCidade.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCidade.Location = new System.Drawing.Point(431, 418);
+            this.txtCidade.Name = "txtCidade";
+            this.txtCidade.Size = new System.Drawing.Size(205, 27);
+            this.txtCidade.TabIndex = 11;
             // 
             // label9
             // 
@@ -307,11 +312,11 @@
             this.button1.Text = "LIMPAR";
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // comboBox2
+            // cbUF
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Items.AddRange(new object[] {
+            this.cbUF.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbUF.FormattingEnabled = true;
+            this.cbUF.Items.AddRange(new object[] {
             "AC",
             "AL",
             "AP",
@@ -339,25 +344,51 @@
             "SP",
             "SE",
             "TO"});
-            this.comboBox2.Location = new System.Drawing.Point(675, 415);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(80, 30);
-            this.comboBox2.TabIndex = 10;
+            this.cbUF.Location = new System.Drawing.Point(675, 415);
+            this.cbUF.Name = "cbUF";
+            this.cbUF.Size = new System.Drawing.Size(80, 30);
+            this.cbUF.TabIndex = 10;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.Control;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.Location = new System.Drawing.Point(12, 12);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(64, 46);
+            this.iconButton1.TabIndex = 11;
+            this.iconButton1.UseVisualStyleBackColor = false;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Montserrat SemiBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(78, 17);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(256, 29);
+            this.label12.TabIndex = 12;
+            this.label12.Text = "Adicionar novo cliente";
             // 
             // formDadosCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
-            this.Controls.Add(this.comboBox2);
+            this.Controls.Add(this.label12);
+            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.cbUF);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSalvar);
-            this.Controls.Add(this.maskedTextBox3);
-            this.Controls.Add(this.maskedTextBox2);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.maskedTextBox1);
-            this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.txtCidade);
+            this.Controls.Add(this.mtbCEP);
+            this.Controls.Add(this.dtpDateNasc);
+            this.Controls.Add(this.txtTelefone);
+            this.Controls.Add(this.cbGenero);
+            this.Controls.Add(this.numIdade);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label11);
@@ -370,14 +401,15 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.txtNumCasa);
+            this.Controls.Add(this.txtBairo);
+            this.Controls.Add(this.txtNomeRua);
             this.Controls.Add(this.txtSobrenomeCliente);
             this.Controls.Add(this.txtNomeCliente);
             this.Name = "formDadosCliente";
             this.Text = "CadastrarCliente";
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numIdade)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -387,29 +419,32 @@
 
         private System.Windows.Forms.TextBox txtNomeCliente;
         private System.Windows.Forms.TextBox txtSobrenomeCliente;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox txtNomeRua;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown numIdade;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cbGenero;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.MaskedTextBox txtTelefone;
+        private System.Windows.Forms.DateTimePicker dtpDateNasc;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox2;
+        private System.Windows.Forms.MaskedTextBox mtbCEP;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.MaskedTextBox maskedTextBox3;
+        private System.Windows.Forms.TextBox txtNumCasa;
+        private System.Windows.Forms.TextBox txtBairo;
+        private System.Windows.Forms.MaskedTextBox txtCidade;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private FontAwesome.Sharp.IconButton btnSalvar;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.ComboBox comboBox2;
+        private System.Windows.Forms.ComboBox cbUF;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private FontAwesome.Sharp.IconButton iconButton1;
+        private System.Windows.Forms.Label label12;
     }
 }

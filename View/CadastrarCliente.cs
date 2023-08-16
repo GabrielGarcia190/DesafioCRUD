@@ -22,7 +22,9 @@ namespace DesafioCRUD.View
         private void btnSalvar_Click(object sender, EventArgs e)
         {
 
-            var cliente = new Cliente();
+
+            var cliente = new Cliente(txtNomeCliente.Text, txtSobrenomeCliente.Text, numIdade.Value, dtpDateNasc.Text, txtTelefone.Text, txtNomeRua.Text, txtNumCasa.Text, mtbCEP.Text, txtBairo.Text, txtCidade.Text, cbUF.Text, cbGenero.TabIndex.ToString());
+
 
 
 
@@ -33,5 +35,7 @@ namespace DesafioCRUD.View
                 MessageBox.Show("Dados Gravados com Sucesso");
             }
         }
+
+
     }
 }

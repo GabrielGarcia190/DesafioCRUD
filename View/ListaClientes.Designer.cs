@@ -1,6 +1,6 @@
 ﻿namespace DesafioCRUD.View
 {
-    partial class ListaClientes
+    partial class formListClientes
     {
         /// <summary>
         /// Required designer variable.
@@ -32,8 +32,8 @@
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
             this.btnCadastrar = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.dgvListClientes = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListClientes)).BeginInit();
             this.SuspendLayout();
             // 
             // textBox1
@@ -84,18 +84,18 @@
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
             // 
-            // dataGridView1
+            // dgvListClientes
             // 
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(21, 107);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(842, 300);
-            this.dataGridView1.TabIndex = 4;
+            this.dgvListClientes.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvListClientes.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.dgvListClientes.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvListClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvListClientes.Location = new System.Drawing.Point(21, 107);
+            this.dgvListClientes.Name = "dgvListClientes";
+            this.dgvListClientes.Size = new System.Drawing.Size(842, 300);
+            this.dgvListClientes.TabIndex = 4;
             // 
-            // ListaClientes
+            // formListClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -104,10 +104,11 @@
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCadastrar);
-            this.Controls.Add(this.dataGridView1);
-            this.Name = "ListaClientes";
+            this.Controls.Add(this.dgvListClientes);
+            this.Name = "formListClientes";
             this.Text = "ListaClientes";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.formListClientes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvListClientes)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -119,6 +120,6 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnCadastrar;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvListClientes;
     }
 }

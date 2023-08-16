@@ -14,9 +14,9 @@ namespace DesafioCRUD.Controller
 			{
 				using ( var conexao = ConexaoBanco.ObterConexao())
 				{
-					string query = "INSERT INTO cliente (nome, sobrenome, idade, nomeRua, bairro, numero, CEP, id_genero) VALUES ('João', 'Silva', 30, 'Rua das Flores', 'Centro', '123', '12345-678', 2);";
+					string query = "INSERT INTO Cliente (nome_Cliente, sobrenome, idade, dataNascimento, numTelefone, Rua, numero, cep, Bairro, Cidade, UF, id_genero) VALUES (@nome, @sobrenome, @idade, @DataNasc, @numTelefone, @nomeRua, @NumeroCasa, @cep, @bairro, @cidade, @UF, @genero);";
 
-					conexao.Execute(query);
+					conexao.Execute(query, new Cliente(cliente.Nome, cliente.Sobrenome, cliente.Idade, cliente.DataNasc, cliente.NumTelefone, cliente.NomeRua, cliente.NumeroCasa, cliente.Cep, cliente.Bairro, cliente.Cidade, cliente.Uf, "2"));
                     return true;
                 }
 

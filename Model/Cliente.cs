@@ -12,31 +12,44 @@ namespace DesafioCRUD.Model
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
 
-        public int Idade { get; set; }
-        public string NomeRua { get; set; }
-        public int Bairro { get; set; }
-        public string Numero { get; set; }
-        public string Cep { get; set; }
+        public decimal Idade { get; set; }
+        public string DataNasc { get; set; }
 
+        public string NumTelefone { get; set; }
+        public string NomeRua { get; set; }
+        public string NumeroCasa { get; set; }
+        public string Cep { get; set; }
+        public string Bairro { get; set; }
+        public string Cidade { get; set; }
+        public string Uf { get; set; }
+        public string Genero { get; set; }
+
+
+       
 
         public Cliente()
         {
 
         }
-
-        public Cliente(string nome, string sobrenome, int idade, string nomeRua, int bairro, string numero, string cep)
+        public Cliente(string nome, string sobrenome, decimal idade, string dataNasc, string numTelefone, string nomeRua, string numeroCasa, string cep, string bairro, string cidade, string uf, string genero)
         {
+
             Nome = nome;
             Sobrenome = sobrenome;
             Idade = idade;
+            DataNasc = dataNasc;
+            NumTelefone = numTelefone;
             NomeRua = nomeRua;
-            Bairro = bairro;
-            Numero = numero;
+            NumeroCasa = numeroCasa;
             Cep = cep;
+            Bairro = bairro;
+            Cidade = cidade;
+            Uf = uf;
+            Genero = genero;
         }
     }
 
 
-    
+
 
 }

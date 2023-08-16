@@ -26,5 +26,12 @@ namespace DesafioCRUD
             formDados.ShowDialog();
 
         }
+
+        private void btnListar_Click(object sender, EventArgs e)
+        {
+            var formList = new formListClientes();
+
+            formList.ShowDialog();
+        }
     }
 }

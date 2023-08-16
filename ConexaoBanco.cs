@@ -11,7 +11,7 @@ namespace CRUD2_0
         public static IDbConnection ObterConexao()
         {
             if (_conexao == null)
-            {
+            {                                 
                 _conexao = new SqlConnection("Data Source=GARCIA-DELLG15\\SQLEXPRESS;Initial Catalog=DesafioCRUD;Integrated Security=True");
             }
 
