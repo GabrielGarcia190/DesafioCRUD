@@ -56,7 +56,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.cbUF = new System.Windows.Forms.ComboBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.btnVoltar = new FontAwesome.Sharp.IconButton();
             this.label12 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numIdade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
@@ -349,19 +349,20 @@
             this.cbUF.Size = new System.Drawing.Size(80, 30);
             this.cbUF.TabIndex = 10;
             // 
-            // iconButton1
+            // btnVoltar
             // 
-            this.iconButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.SystemColors.Control;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
-            this.iconButton1.IconColor = System.Drawing.Color.Black;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.Location = new System.Drawing.Point(12, 12);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(64, 46);
-            this.iconButton1.TabIndex = 11;
-            this.iconButton1.UseVisualStyleBackColor = false;
+            this.btnVoltar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.btnVoltar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnVoltar.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnVoltar.IconChar = FontAwesome.Sharp.IconChar.ArrowLeft;
+            this.btnVoltar.IconColor = System.Drawing.Color.Black;
+            this.btnVoltar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnVoltar.Location = new System.Drawing.Point(12, 12);
+            this.btnVoltar.Name = "btnVoltar";
+            this.btnVoltar.Size = new System.Drawing.Size(64, 46);
+            this.btnVoltar.TabIndex = 11;
+            this.btnVoltar.UseVisualStyleBackColor = false;
+            this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
             // label12
             // 
@@ -379,7 +380,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(884, 561);
             this.Controls.Add(this.label12);
-            this.Controls.Add(this.iconButton1);
+            this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.cbUF);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnSalvar);
@@ -444,7 +445,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.ComboBox cbUF;
         private System.Windows.Forms.BindingSource bindingSource1;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton btnVoltar;
         private System.Windows.Forms.Label label12;
     }
 }

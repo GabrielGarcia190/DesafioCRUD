@@ -59,6 +59,7 @@
     <Compile Include="ConexaoBanco.cs" />
     <Compile Include="Controller\CadastrarCliente.cs" />
     <Compile Include="Controller\ListarClientes.cs" />
+    <Compile Include="Enums\Genero.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="View\CadastrarCliente.cs">
       <SubType>Form</SubType>
