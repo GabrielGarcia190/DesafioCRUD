@@ -13,7 +13,7 @@ namespace DesafioCRUD.Model
         public string Sobrenome { get; set; }
 
         public decimal Idade { get; set; }
-        public string DataNasc { get; set; }
+        public string DataNascimento { get; set; }
 
         public string NumTelefone { get; set; }
         public string NomeRua { get; set; }
@@ -37,7 +37,7 @@ namespace DesafioCRUD.Model
             Nome = nome;
             Sobrenome = sobrenome;
             Idade = idade;
-            DataNasc = dataNasc;
+            DataNascimento = dataNasc;
             NumTelefone = numTelefone;
             NomeRua = nomeRua;
             NumeroCasa = numeroCasa;

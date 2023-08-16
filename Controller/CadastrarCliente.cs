@@ -16,7 +16,7 @@ namespace DesafioCRUD.Controller
 				{
 					string query = "INSERT INTO Cliente (nome_Cliente, sobrenome, idade, dataNascimento, numTelefone, Rua, numero, cep, Bairro, Cidade, UF, id_genero) VALUES (@nome, @sobrenome, @idade, @DataNasc, @numTelefone, @nomeRua, @NumeroCasa, @cep, @bairro, @cidade, @UF, @genero);";
 
-					conexao.Execute(query, new Cliente(cliente.Nome, cliente.Sobrenome, cliente.Idade, cliente.DataNasc, cliente.NumTelefone, cliente.NomeRua, cliente.NumeroCasa, cliente.Cep, cliente.Bairro, cliente.Cidade, cliente.Uf, "2"));
+					conexao.Execute(query, new Cliente(cliente.Nome, cliente.Sobrenome, cliente.Idade, cliente.DataNascimento, cliente.NumTelefone, cliente.NomeRua, cliente.NumeroCasa, cliente.Cep, cliente.Bairro, cliente.Cidade, cliente.Uf, "2"));
                     return true;
                 }
 
