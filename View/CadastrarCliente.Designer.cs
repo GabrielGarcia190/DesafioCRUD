@@ -46,14 +46,14 @@
             this.mtbCEP = new System.Windows.Forms.MaskedTextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.txtNumCasa = new System.Windows.Forms.TextBox();
-            this.txtBairo = new System.Windows.Forms.TextBox();
+            this.txtBairro = new System.Windows.Forms.TextBox();
             this.txtCidade = new System.Windows.Forms.MaskedTextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.btnSalvar = new FontAwesome.Sharp.IconButton();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnLimpar = new System.Windows.Forms.Button();
             this.cbUF = new System.Windows.Forms.ComboBox();
             this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.btnVoltar = new FontAwesome.Sharp.IconButton();
@@ -223,13 +223,13 @@
             this.txtNumCasa.Size = new System.Drawing.Size(98, 27);
             this.txtNumCasa.TabIndex = 8;
             // 
-            // txtBairo
+            // txtBairro
             // 
-            this.txtBairo.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBairo.Location = new System.Drawing.Point(83, 418);
-            this.txtBairo.Name = "txtBairo";
-            this.txtBairo.Size = new System.Drawing.Size(300, 27);
-            this.txtBairo.TabIndex = 10;
+            this.txtBairro.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBairro.Location = new System.Drawing.Point(83, 418);
+            this.txtBairro.Name = "txtBairro";
+            this.txtBairro.Size = new System.Drawing.Size(300, 27);
+            this.txtBairro.TabIndex = 10;
             // 
             // txtCidade
             // 
@@ -299,18 +299,19 @@
             this.btnSalvar.UseVisualStyleBackColor = false;
             this.btnSalvar.Click += new System.EventHandler(this.btnSalvar_Click);
             // 
-            // button1
+            // btnLimpar
             // 
-            this.button1.BackColor = System.Drawing.Color.Crimson;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Location = new System.Drawing.Point(83, 487);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 39);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "LIMPAR";
-            this.button1.UseVisualStyleBackColor = false;
+            this.btnLimpar.BackColor = System.Drawing.Color.Crimson;
+            this.btnLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpar.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpar.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.btnLimpar.Location = new System.Drawing.Point(83, 487);
+            this.btnLimpar.Name = "btnLimpar";
+            this.btnLimpar.Size = new System.Drawing.Size(134, 39);
+            this.btnLimpar.TabIndex = 9;
+            this.btnLimpar.Text = "LIMPAR";
+            this.btnLimpar.UseVisualStyleBackColor = false;
+            this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // cbUF
             // 
@@ -382,7 +383,7 @@
             this.Controls.Add(this.label12);
             this.Controls.Add(this.btnVoltar);
             this.Controls.Add(this.cbUF);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnLimpar);
             this.Controls.Add(this.btnSalvar);
             this.Controls.Add(this.txtCidade);
             this.Controls.Add(this.mtbCEP);
@@ -403,7 +404,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNumCasa);
-            this.Controls.Add(this.txtBairo);
+            this.Controls.Add(this.txtBairro);
             this.Controls.Add(this.txtNomeRua);
             this.Controls.Add(this.txtSobrenomeCliente);
             this.Controls.Add(this.txtNomeCliente);
@@ -435,14 +436,14 @@
         private System.Windows.Forms.MaskedTextBox mtbCEP;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNumCasa;
-        private System.Windows.Forms.TextBox txtBairo;
+        private System.Windows.Forms.TextBox txtBairro;
         private System.Windows.Forms.MaskedTextBox txtCidade;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
         private System.Windows.Forms.Label label13;
         private FontAwesome.Sharp.IconButton btnSalvar;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnLimpar;
         private System.Windows.Forms.ComboBox cbUF;
         private System.Windows.Forms.BindingSource bindingSource1;
         private FontAwesome.Sharp.IconButton btnVoltar;

@@ -29,7 +29,7 @@ namespace DesafioCRUD.View
 
             //var genero = 
 
-            var cliente = new Cliente(txtNomeCliente.Text, txtSobrenomeCliente.Text, numIdade.Value, dtpDateNasc.Text, txtTelefone.Text, txtNomeRua.Text, txtNumCasa.Text, mtbCEP.Text, txtBairo.Text, txtCidade.Text, cbUF.Text, cbGenero.TabIndex.ToString());
+            var cliente = new Cliente(txtNomeCliente.Text, txtSobrenomeCliente.Text, numIdade.Value, dtpDateNasc.Text, txtTelefone.Text, txtNomeRua.Text, txtNumCasa.Text, mtbCEP.Text, txtBairro.Text, txtCidade.Text, cbUF.Text, cbGenero.TabIndex.ToString());
 
 
 
@@ -47,6 +47,21 @@ namespace DesafioCRUD.View
           this.FindForm().Close();
         }
 
-       
+        private void btnLimpar_Click(object sender, EventArgs e)
+        {
+            txtNomeCliente.Text = "";
+            txtSobrenomeCliente.Text = "";
+            numIdade.Value = 0; 
+            dtpDateNasc.Text = "";
+            txtTelefone.Text = "";
+            txtNomeRua.Text = "";
+            txtNumCasa.Text = "";
+            mtbCEP.Text = "";
+            txtBairro.Text = "";
+            txtCidade.Text = "";
+            cbUF.SelectedIndex = -1; 
+            cbGenero.SelectedIndex = -1; 
+
+        }
     }
 }
