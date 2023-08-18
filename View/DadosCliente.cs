@@ -15,19 +15,25 @@ namespace DesafioCRUD.View
     public partial class formDadosCliente : Form
     {
 
-       private readonly bool isEdit;
+        private readonly bool isEdit;
         public formDadosCliente(int id = 0)
         {
             InitializeComponent();
 
-            if(id != 0)
+            if (id != 0)
             {
                 lblTitulo.Text = "Editar Cadastro";
                 checkAtivo.Enabled = true;
                 checkAtivo.Visible = true;
                 btnLimpar.Text = "DELETAR";
                 isEdit = true;
+                var dados_cliente = new ConsultaClienteController().ConsultarCliente(id);
+
+                txtNomeCliente.Text = dados_cliente.Nome;
+                txtSobrenomeCliente.Text = dados_cliente.Sobrenome;
+                txt
             }
+
         }
         private void btnSalvar_Click(object sender, EventArgs e)
         {

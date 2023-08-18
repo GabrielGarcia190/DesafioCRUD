@@ -20,7 +20,7 @@ namespace DesafioCRUD.View
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            var formdadosClientes = new formDadosCliente(2);
+            var formdadosClientes = new formDadosCliente(4);
 
             formdadosClientes.ShowDialog();
         }

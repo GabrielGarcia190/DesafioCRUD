@@ -57,9 +57,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ConexaoBanco.cs" />
+    <Compile Include="Controller\ConsultaClienteController.cs" />
     <Compile Include="Controller\CadastrarCliente.cs" />
     <Compile Include="Controller\ListarClientes.cs" />
     <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Repositories\ConsultaporIdRepository.cs" />
+    <Compile Include="Repositories\EditarClientesRepository.cs" />
     <Compile Include="View\DadosCliente.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,9 +115,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Helpers\" />
-    <Folder Include="Repositories\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
