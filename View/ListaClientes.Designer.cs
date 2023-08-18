@@ -97,6 +97,7 @@
             this.dgvListClientes.Name = "dgvListClientes";
             this.dgvListClientes.ReadOnly = true;
             this.dgvListClientes.RowTemplate.ReadOnly = true;
+            this.dgvListClientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvListClientes.Size = new System.Drawing.Size(823, 300);
             this.dgvListClientes.TabIndex = 4;
             // 

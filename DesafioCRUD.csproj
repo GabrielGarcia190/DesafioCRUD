@@ -59,10 +59,13 @@
     <Compile Include="ConexaoBanco.cs" />
     <Compile Include="Controller\ConsultaClienteController.cs" />
     <Compile Include="Controller\CadastrarCliente.cs" />
+    <Compile Include="Controller\EditarClienteController.cs" />
     <Compile Include="Controller\ListarClientes.cs" />
+    <Compile Include="Enum\Genero.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Repositories\ConsultaporIdRepository.cs" />
     <Compile Include="Repositories\EditarClientesRepository.cs" />
+    <Compile Include="Repositories\ExcluirClienteRepository.cs" />
     <Compile Include="View\DadosCliente.cs">
       <SubType>Form</SubType>
     </Compile>

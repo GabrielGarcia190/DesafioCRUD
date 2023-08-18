@@ -20,7 +20,11 @@ namespace DesafioCRUD.View
 
         private void btnEditar_Click(object sender, EventArgs e)
         {
-            var formdadosClientes = new formDadosCliente(4);
+            var cliente_selecionado = Int32.Parse(dgvListClientes.SelectedCells[0].Value.ToString());
+
+            Console.WriteLine(int.Parse(cliente_selecionado.ToString()));
+
+            var formdadosClientes = new formDadosCliente(cliente_selecionado);
 
             formdadosClientes.ShowDialog();
         }

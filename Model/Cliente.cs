@@ -4,7 +4,7 @@ namespace DesafioCRUD.Model
 {
     public class Cliente
     {
-        public int Id_cliente { get; set; }
+        public string Id_cliente { get; set; }
         public string Nome { get; set; }
         public string Sobrenome { get; set; }
         public DateTime DataNascimento { get; set; }
@@ -48,11 +48,11 @@ namespace DesafioCRUD.Model
             Genero = genero;
         }
 
-        public Cliente(string nome, string sobrenome, int idade, DateTime dataNascimento, string numTelefone, string nomeRua, string numeroCasa, string cep, string bairro, string cidade, string uf, string genero)
+        public Cliente(string id, string nome, string sobrenome, DateTime dataNascimento, string numTelefone, string nomeRua, string numeroCasa, string cep, string bairro, string cidade, string uf, string genero)
         {
+            Id_cliente = id;
             Nome = nome;
             Sobrenome = sobrenome;
-            Idade = idade;
             DataNascimento = dataNascimento;
             NumTelefone = numTelefone;
             NomeRua = nomeRua;
