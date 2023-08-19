@@ -130,6 +130,7 @@
             // 
             this.cbGenero.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbGenero.FormattingEnabled = true;
+            this.cbGenero.ImeMode = System.Windows.Forms.ImeMode.On;
             this.cbGenero.Items.AddRange(new object[] {
             "Feminino",
             "Masculino",
@@ -318,6 +319,7 @@
             // 
             this.cbUF.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbUF.FormattingEnabled = true;
+            this.cbUF.ImeMode = System.Windows.Forms.ImeMode.On;
             this.cbUF.Items.AddRange(new object[] {
             "AC",
             "AL",

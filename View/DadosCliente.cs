@@ -1,15 +1,8 @@
 ﻿using DesafioCRUD.Controller;
-using DesafioCRUD.Enum;
+using DesafioCRUD.DTO;
 using DesafioCRUD.Model;
 using DesafioCRUD.Repositories;
 using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace DesafioCRUD.View
@@ -56,6 +49,17 @@ namespace DesafioCRUD.View
         {
 
             var cliente = ObterDados();
+            var respota = ValidarCampos(cliente);
+
+            Console.WriteLine(cliente.DataNascimento);
+            Console.WriteLine(DateTime.Now.Date);
+            Console.WriteLine(cliente.Cep.Length);
+
+            if(respota.Sucesso == false)
+            {
+                MessageBox.Show(respota.MensagemErro.ToString());
+                return;
+            }
 
 
             Console.WriteLine(cliente.Nome);
@@ -119,16 +123,39 @@ namespace DesafioCRUD.View
             if (!isEdit)
             {
                 var cliente = new Cliente(txtNomeCliente.Text, txtSobrenomeCliente.Text, dtpDateNasc.Value, txtTelefone.Text, txtNomeRua.Text, txtNumCasa.Text, mtbCEP.Text, txtBairro.Text, txtCidade.Text, cbUF.Text, cbGenero.SelectedIndex.ToString());
+               
                 return cliente;
+
             }
             else
             {
                 var cliente = new Cliente(CodigoCliente, txtNomeCliente.Text, txtSobrenomeCliente.Text, dtpDateNasc.Value, txtTelefone.Text, txtNomeRua.Text, txtNumCasa.Text, mtbCEP.Text, txtBairro.Text, txtCidade.Text, cbUF.Text, cbGenero.SelectedIndex.ToString());
+        
                 return cliente;
 
             }
+        }
 
 
+        public DadosRetornoDTO ValidarCampos(Cliente cliente)
+        {
+
+            var dataNascimento = DateTime.Now.Date;
+            if (String.IsNullOrEmpty(cliente.Nome)) return new DadosRetornoDTO { MensagemErro = "Preencha Corretamente o nome do Cliente", Sucesso = false };
+            if (String.IsNullOrEmpty(cliente.Sobrenome)) return new DadosRetornoDTO { MensagemErro = "Preencha Corretamente o sobrenome do Cliente", Sucesso = false };
+            if (cliente.NumTelefone.Length != 14) return new DadosRetornoDTO { MensagemErro = "Preencha Corretamente o número de telefone", Sucesso = false };
+            if (cliente.DataNascimento == dataNascimento) return new DadosRetornoDTO { MensagemErro = "Preencha Corretamente a data de nascimento", Sucesso = false };
+            if (String.IsNullOrEmpty(cliente.NomeRua)) return new DadosRetornoDTO { MensagemErro = "Preencha Corretamente o nome da rua", Sucesso = false };
+            if (cliente.NumeroCasa.Length > 10) return new DadosRetornoDTO { MensagemErro = "Por favor preencha corretamente o número da casa", Sucesso = false };
+            if (cliente.Cep.Length != 9) return new DadosRetornoDTO { MensagemErro = "O número da casa está muito extenso, por favor preencha corretamente", Sucesso = false };
+            if (String.IsNullOrEmpty(txtBairro.Text)) return new DadosRetornoDTO { MensagemErro = "Preencha corretamente o bairro", Sucesso = false };
+            if (String.IsNullOrEmpty(txtCidade.Text)) return new DadosRetornoDTO { MensagemErro = "Preencha Corretamento o nome da cidade", Sucesso = false };
+            if (cbUF.Text.Length != 2) return new DadosRetornoDTO { MensagemErro = "Selecione corrtamente a UF", Sucesso = false };
+
+
+
+
+            return new DadosRetornoDTO { Sucesso = true };
         }
     }
 }

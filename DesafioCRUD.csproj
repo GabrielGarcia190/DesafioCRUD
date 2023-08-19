@@ -61,9 +61,11 @@
     <Compile Include="Controller\CadastrarCliente.cs" />
     <Compile Include="Controller\EditarClienteController.cs" />
     <Compile Include="Controller\ListarClientes.cs" />
+    <Compile Include="DTO\DadosRetornoDTO.cs" />
     <Compile Include="Enum\Genero.cs" />
+    <Compile Include="Helpers\CalculaDataNascimento.cs" />
     <Compile Include="Model\Cliente.cs" />
-    <Compile Include="Repositories\ConsultaporIdRepository.cs" />
+    <Compile Include="Repositories\ConsultarClienteRepository.cs" />
     <Compile Include="Repositories\EditarClientesRepository.cs" />
     <Compile Include="Repositories\ExcluirClienteRepository.cs" />
     <Compile Include="View\DadosCliente.cs">

@@ -5,6 +5,8 @@ VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioCRUD", "DesafioCRUD.csproj", "{342B1CBA-91F4-4448-871D-956520BA49F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioCRUD.Test", "..\DesafioCRUD.Test\DesafioCRUD.Test.csproj", "{40FDF2DA-5D8E-4F0B-8E9F-D021D3CCBD56}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{342B1CBA-91F4-4448-871D-956520BA49F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{342B1CBA-91F4-4448-871D-956520BA49F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{342B1CBA-91F4-4448-871D-956520BA49F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40FDF2DA-5D8E-4F0B-8E9F-D021D3CCBD56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40FDF2DA-5D8E-4F0B-8E9F-D021D3CCBD56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40FDF2DA-5D8E-4F0B-8E9F-D021D3CCBD56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40FDF2DA-5D8E-4F0B-8E9F-D021D3CCBD56}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

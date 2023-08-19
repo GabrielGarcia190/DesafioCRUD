@@ -8,17 +8,7 @@ namespace DesafioCRUD.Controller
         public bool EditarCliente(Cliente cliente)
         {
 
-            var sucesso = new EditarClientesRepository().AtualizarCadastro(cliente);
-
-
-            if (sucesso)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            return new EditarClientesRepository().AtualizarCadastro(cliente);
 
         }
 
