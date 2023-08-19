@@ -25,7 +25,7 @@ namespace DesafioCRUD.View
                 checkAtivo.Visible = true;
                 btnLimpar.Text = "DELETAR";
                 isEdit = true;
-                var dados_cliente = new ConsultaClienteController().ConsultarCliente(id);
+                var dados_cliente = new ConsultarClienteController().ConsultarCliente(id);
 
                 txtNomeCliente.Text = dados_cliente.Nome;
                 txtSobrenomeCliente.Text = dados_cliente.Sobrenome;
@@ -84,6 +84,7 @@ namespace DesafioCRUD.View
                 if (sucesso)
                 {
                     MessageBox.Show("Dados Editados com Sucesso");
+                    this.FindForm().Close();
                 }
             }
         }

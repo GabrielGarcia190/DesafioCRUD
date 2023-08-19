@@ -1,5 +1,8 @@
 ﻿using DesafioCRUD.Controller;
+using DesafioCRUD.Helpers;
 using System;
+using System.Diagnostics;
+using System.Linq.Expressions;
 using System.Windows.Forms;
 
 namespace DesafioCRUD.View
@@ -32,13 +35,51 @@ namespace DesafioCRUD.View
             var filtroSelecionado = cbFiltro.SelectedIndex;
             var dadosBusca = txtDadosBusca.Text;
 
+            switch (filtroSelecionado)
+            {
+                case 1:
+                    {
+                        var validarDados = new SomenteNumeros().TemSomenteNumeros(dadosBusca);
 
-            var respotas = new ConsultaClienteController().ConsultarClientePorNome(dadosBusca);
+                        if (validarDados == false)
+                        {
+                            MessageBox.Show("Para pesquisar por idade preencha somente com números");
+                            return;
+                        }
+                        var respotas = new ConsultarClienteController().ConsultarClientePorIdade(Int32.Parse(dadosBusca));
+                        dgvListClientes.DataSource = respotas;
+                        break;
+                    }
+                case 2:
+                    {
+                        var respotas = new ConsultarClienteController().ConsultarClientePorCidade(dadosBusca);
+                        dgvListClientes.DataSource = respotas;
 
-            dgvListClientes.DataSource = respotas;
+                        break;
+                    }
+                case 3:
+                    {
+                        var respotas = new ConsultarClienteController().ConsultarClientePorTelefone(dadosBusca);
+                        dgvListClientes.DataSource = respotas;
+                        break;
+                    }
+                case 4:
+                    { 
+                        var respotas = new ConsultarClienteController().ConsultarClientePorGenero(dadosBusca);
+                        dgvListClientes.DataSource = respotas;
+                        break;
+                    }
 
-            Console.WriteLine(filtroSelecionado);
+                    
+                default:
+                    {
+                        var respotas = new ConsultarClienteController().ConsultarClientePorNome(dadosBusca);
 
+                        dgvListClientes.DataSource = respotas;
+
+                        break;
+                    }
+            }
         }
 
         private void btnVoltar_Click(object sender, EventArgs e)

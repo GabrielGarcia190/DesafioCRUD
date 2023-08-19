@@ -2,6 +2,7 @@
 using Dapper;
 using DesafioCRUD.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -25,14 +26,14 @@ namespace DesafioCRUD.Repositories
             }
         }
 
-        public IEnumerable<Cliente> BuscarPorNome(string nome_cliente)
+        public IEnumerable BuscarPorNome(string nome_cliente)
         {
             try
             {
                 using (var conexao = ConexaoBanco.ObterConexao())
                 {
-                    query += "nome_Cliente LIKE '%@nomecliente'";
-                    var resposta = conexao.Query<Cliente>(query, new { Nome = nome_cliente }).ToList();
+                    query += "nome_Cliente LIKE @Nome + '%'";
+                    var resposta = conexao.Query(query, new { Nome = nome_cliente }).ToList();
 
                     return resposta;
 
@@ -43,10 +44,83 @@ namespace DesafioCRUD.Repositories
 
                 throw new Exception($"Não foi possível realizar a consulta: \n Motivo: {error.Message}");
             }
+        }
+        public IEnumerable BuscarPorCidade(string nome_cidade)
+        {
+            try
+            {
+                using (var conexao = ConexaoBanco.ObterConexao())
+                {
+                    query += "Cidade LIKE @Cidade + '%'";
+                    var resposta = conexao.Query(query, new { Cidade = nome_cidade }).ToList();
 
+                    return resposta;
 
+                }
+            }
+            catch (Exception error)
+            {
 
+                throw new Exception($"Não foi possível realizar a consulta: \n Motivo: {error.Message}");
+            }
+        }
+
+        public IEnumerable BuscarPorTelefone(string numero_telefone) {
+            try
+            {
+                using (var conexao = ConexaoBanco.ObterConexao())
+                {
+                    query += "numTelefone LIKE '%' + @NumTelefone + '%'";
+                    var resposta = conexao.Query(query, new { NumTelefone = numero_telefone }).ToList();
+
+                    return resposta;
+                }
+            }
+            catch (Exception error)
+            {
+                throw new Exception($"Não foi possível realizar a consulta: \n Motivo: {error.Message}");
+            }
+        }
+
+        public IEnumerable BuscarPorDataNascimento (DateTime dataNascimento)
+        {
+            try
+            {
+                using (var conexao = ConexaoBanco.ObterConexao())
+                {
+                    query += "dataNascimento <= @DataNascimento";
+                    var resposta = conexao.Query(query, new { DataNascimento = dataNascimento }).ToList();
+
+                    return resposta;
+                }
+            }
+            catch (Exception error)
+            {
+
+                throw new Exception($"Não foi possível realizar a consulta: \n Motivo: {error.Message}");
+            }
 
         }
+
+        public IEnumerable BuscarPorGenero (string genero) {
+            try
+            {
+                using (var conexao = ConexaoBanco.ObterConexao())
+                {
+                    query += "g.nomeGenero LIKE @Genero";
+                    var resposta = conexao.Query(query, new { Genero = genero }).ToList();
+
+                    return resposta;
+                }
+            }
+            catch (Exception error)
+            {
+
+                throw new Exception($"Não foi possível realizar a consulta: \n Motivo: {error.Message}");
+            }
+        }
     }
+
+
+
 }
