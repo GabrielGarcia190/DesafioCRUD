@@ -46,7 +46,7 @@
             this.txtDadosBusca.Location = new System.Drawing.Point(142, 88);
             this.txtDadosBusca.Name = "txtDadosBusca";
             this.txtDadosBusca.Size = new System.Drawing.Size(669, 28);
-            this.txtDadosBusca.TabIndex = 8;
+            this.txtDadosBusca.TabIndex = 2;
             // 
             // cbFiltro
             // 
@@ -63,7 +63,7 @@
             this.cbFiltro.Location = new System.Drawing.Point(15, 86);
             this.cbFiltro.Name = "cbFiltro";
             this.cbFiltro.Size = new System.Drawing.Size(121, 30);
-            this.cbFiltro.TabIndex = 7;
+            this.cbFiltro.TabIndex = 1;
             // 
             // btnEditar
             // 
@@ -93,6 +93,7 @@
             this.btnCadastrar.TabIndex = 6;
             this.btnCadastrar.Text = "CADASTRAR";
             this.btnCadastrar.UseVisualStyleBackColor = false;
+            this.btnCadastrar.Click += new System.EventHandler(this.btnCadastrar_Click);
             // 
             // dgvListClientes
             // 
@@ -129,7 +130,7 @@
             this.btnBuscar.Location = new System.Drawing.Point(799, 88);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(45, 28);
-            this.btnBuscar.TabIndex = 10;
+            this.btnBuscar.TabIndex = 3;
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
@@ -144,7 +145,7 @@
             this.btnVoltar.Location = new System.Drawing.Point(12, 12);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(64, 46);
-            this.btnVoltar.TabIndex = 12;
+            this.btnVoltar.TabIndex = 0;
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 

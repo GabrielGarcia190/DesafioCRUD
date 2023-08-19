@@ -45,5 +45,11 @@ namespace DesafioCRUD.View
         {
             this.FindForm().Close();
         }
+
+        private void btnCadastrar_Click(object sender, EventArgs e)
+        {
+            var form = new formDadosCliente();
+            form.ShowDialog();
+        }
     }
 }

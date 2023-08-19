@@ -46,7 +46,7 @@
             this.btnCadastrar.Location = new System.Drawing.Point(221, 203);
             this.btnCadastrar.Name = "btnCadastrar";
             this.btnCadastrar.Size = new System.Drawing.Size(163, 122);
-            this.btnCadastrar.TabIndex = 0;
+            this.btnCadastrar.TabIndex = 1;
             this.btnCadastrar.Text = "Cadastrar Clientes";
             this.btnCadastrar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnCadastrar.UseVisualStyleBackColor = false;
@@ -58,13 +58,14 @@
             this.btnListar.FlatAppearance.BorderSize = 0;
             this.btnListar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnListar.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnListar.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.btnListar.IconChar = FontAwesome.Sharp.IconChar.ListUl;
-            this.btnListar.IconColor = System.Drawing.Color.Black;
+            this.btnListar.IconColor = System.Drawing.Color.White;
             this.btnListar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.btnListar.Location = new System.Drawing.Point(470, 203);
             this.btnListar.Name = "btnListar";
             this.btnListar.Size = new System.Drawing.Size(160, 122);
-            this.btnListar.TabIndex = 1;
+            this.btnListar.TabIndex = 2;
             this.btnListar.Text = "Listar Clientes";
             this.btnListar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
             this.btnListar.UseVisualStyleBackColor = false;

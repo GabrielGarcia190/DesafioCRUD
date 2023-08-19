@@ -34,8 +34,6 @@
             this.txtNomeRua = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.numIdade = new System.Windows.Forms.NumericUpDown();
-            this.label3 = new System.Windows.Forms.Label();
             this.cbGenero = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -59,7 +57,6 @@
             this.btnVoltar = new FontAwesome.Sharp.IconButton();
             this.lblTitulo = new System.Windows.Forms.Label();
             this.checkAtivo = new System.Windows.Forms.CheckBox();
-            ((System.ComponentModel.ISupportInitialize)(this.numIdade)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -85,7 +82,7 @@
             this.txtNomeRua.Location = new System.Drawing.Point(83, 344);
             this.txtNomeRua.Name = "txtNomeRua";
             this.txtNomeRua.Size = new System.Drawing.Size(388, 27);
-            this.txtNomeRua.TabIndex = 7;
+            this.txtNomeRua.TabIndex = 6;
             // 
             // label1
             // 
@@ -107,29 +104,10 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "Sobrenome:";
             // 
-            // numIdade
-            // 
-            this.numIdade.AccessibleRole = System.Windows.Forms.AccessibleRole.None;
-            this.numIdade.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.numIdade.Location = new System.Drawing.Point(454, 258);
-            this.numIdade.Name = "numIdade";
-            this.numIdade.Size = new System.Drawing.Size(133, 27);
-            this.numIdade.TabIndex = 5;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(450, 231);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 22);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Idade:";
-            // 
             // cbGenero
             // 
+            this.cbGenero.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbGenero.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbGenero.FormattingEnabled = true;
             this.cbGenero.ImeMode = System.Windows.Forms.ImeMode.On;
             this.cbGenero.Items.AddRange(new object[] {
             "Feminino",
@@ -138,7 +116,7 @@
             this.cbGenero.Location = new System.Drawing.Point(618, 256);
             this.cbGenero.Name = "cbGenero";
             this.cbGenero.Size = new System.Drawing.Size(137, 30);
-            this.cbGenero.TabIndex = 6;
+            this.cbGenero.TabIndex = 5;
             // 
             // label4
             // 
@@ -157,7 +135,7 @@
             this.label5.Location = new System.Drawing.Point(79, 234);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(81, 22);
-            this.label5.TabIndex = 1;
+            this.label5.TabIndex = 0;
             this.label5.Text = "Telefone:";
             // 
             // txtTelefone
@@ -167,13 +145,13 @@
             this.txtTelefone.Mask = "(99)99999-9999";
             this.txtTelefone.Name = "txtTelefone";
             this.txtTelefone.Size = new System.Drawing.Size(122, 27);
-            this.txtTelefone.TabIndex = 4;
+            this.txtTelefone.TabIndex = 3;
             // 
             // dtpDateNasc
             // 
             this.dtpDateNasc.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateNasc.Location = new System.Drawing.Point(246, 258);
+            this.dtpDateNasc.Location = new System.Drawing.Point(327, 259);
             this.dtpDateNasc.Name = "dtpDateNasc";
             this.dtpDateNasc.Size = new System.Drawing.Size(172, 27);
             this.dtpDateNasc.TabIndex = 4;
@@ -182,10 +160,10 @@
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(242, 234);
+            this.label6.Location = new System.Drawing.Point(323, 234);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(176, 22);
-            this.label6.TabIndex = 1;
+            this.label6.TabIndex = 0;
             this.label6.Text = "Data de Nascimento:";
             // 
             // label7
@@ -205,7 +183,7 @@
             this.mtbCEP.Mask = "99999-999";
             this.mtbCEP.Name = "mtbCEP";
             this.mtbCEP.Size = new System.Drawing.Size(105, 27);
-            this.mtbCEP.TabIndex = 9;
+            this.mtbCEP.TabIndex = 8;
             // 
             // label8
             // 
@@ -223,7 +201,7 @@
             this.txtNumCasa.Location = new System.Drawing.Point(508, 344);
             this.txtNumCasa.Name = "txtNumCasa";
             this.txtNumCasa.Size = new System.Drawing.Size(98, 27);
-            this.txtNumCasa.TabIndex = 8;
+            this.txtNumCasa.TabIndex = 7;
             // 
             // txtBairro
             // 
@@ -231,7 +209,7 @@
             this.txtBairro.Location = new System.Drawing.Point(83, 418);
             this.txtBairro.Name = "txtBairro";
             this.txtBairro.Size = new System.Drawing.Size(300, 27);
-            this.txtBairro.TabIndex = 10;
+            this.txtBairro.TabIndex = 9;
             // 
             // txtCidade
             // 
@@ -239,7 +217,7 @@
             this.txtCidade.Location = new System.Drawing.Point(431, 418);
             this.txtCidade.Name = "txtCidade";
             this.txtCidade.Size = new System.Drawing.Size(205, 27);
-            this.txtCidade.TabIndex = 11;
+            this.txtCidade.TabIndex = 10;
             // 
             // label9
             // 
@@ -295,7 +273,7 @@
             this.btnSalvar.Location = new System.Drawing.Point(608, 487);
             this.btnSalvar.Name = "btnSalvar";
             this.btnSalvar.Size = new System.Drawing.Size(134, 39);
-            this.btnSalvar.TabIndex = 8;
+            this.btnSalvar.TabIndex = 12;
             this.btnSalvar.Text = "SALVAR";
             this.btnSalvar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.btnSalvar.UseVisualStyleBackColor = false;
@@ -310,15 +288,15 @@
             this.btnLimpar.Location = new System.Drawing.Point(83, 487);
             this.btnLimpar.Name = "btnLimpar";
             this.btnLimpar.Size = new System.Drawing.Size(134, 39);
-            this.btnLimpar.TabIndex = 9;
+            this.btnLimpar.TabIndex = 13;
             this.btnLimpar.Text = "LIMPAR";
             this.btnLimpar.UseVisualStyleBackColor = false;
             this.btnLimpar.Click += new System.EventHandler(this.btnLimpar_Click);
             // 
             // cbUF
             // 
+            this.cbUF.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbUF.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbUF.FormattingEnabled = true;
             this.cbUF.ImeMode = System.Windows.Forms.ImeMode.On;
             this.cbUF.Items.AddRange(new object[] {
             "AC",
@@ -351,7 +329,7 @@
             this.cbUF.Location = new System.Drawing.Point(675, 415);
             this.cbUF.Name = "cbUF";
             this.cbUF.Size = new System.Drawing.Size(80, 30);
-            this.cbUF.TabIndex = 10;
+            this.cbUF.TabIndex = 11;
             // 
             // btnVoltar
             // 
@@ -364,7 +342,7 @@
             this.btnVoltar.Location = new System.Drawing.Point(12, 12);
             this.btnVoltar.Name = "btnVoltar";
             this.btnVoltar.Size = new System.Drawing.Size(64, 46);
-            this.btnVoltar.TabIndex = 11;
+            this.btnVoltar.TabIndex = 0;
             this.btnVoltar.UseVisualStyleBackColor = false;
             this.btnVoltar.Click += new System.EventHandler(this.btnVoltar_Click);
             // 
@@ -410,7 +388,6 @@
             this.Controls.Add(this.dtpDateNasc);
             this.Controls.Add(this.txtTelefone);
             this.Controls.Add(this.cbGenero);
-            this.Controls.Add(this.numIdade);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label11);
@@ -421,7 +398,6 @@
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNumCasa);
             this.Controls.Add(this.txtBairro);
@@ -430,7 +406,6 @@
             this.Controls.Add(this.txtNomeCliente);
             this.Name = "formDadosCliente";
             this.Text = "CadastrarCliente";
-            ((System.ComponentModel.ISupportInitialize)(this.numIdade)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -444,8 +419,6 @@
         private System.Windows.Forms.TextBox txtNomeRua;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.NumericUpDown numIdade;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ComboBox cbGenero;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
