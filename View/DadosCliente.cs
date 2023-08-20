@@ -51,21 +51,15 @@ namespace DesafioCRUD.View
             var cliente = ObterDados();
             var respota = ValidarCampos(cliente);
 
-            Console.WriteLine(cliente.Genero);
-
             if (respota.Sucesso == false)
             {
                 MessageBox.Show(respota.MensagemErro.ToString());
                 return;
             }
 
-
-            Console.WriteLine(cliente.Nome);
-
             if (!isEdit)
             {
-
-                var sucesso = new CadastrarCliente().Cadastrar(cliente);
+                var sucesso = new CadastrarClienteControoller().CadastrarCliente(cliente);
 
                 if (sucesso)
                 {
@@ -73,9 +67,7 @@ namespace DesafioCRUD.View
                     LimparCampos();
                     return;
                 }
-
                 return;
-
             }
             else
             {
@@ -96,10 +88,10 @@ namespace DesafioCRUD.View
 
         private void btnLimpar_Click(object sender, EventArgs e)
         {
-
             if (isEdit)
             {
-                var respostar = new ExcluirClienteRepository().ExcluirCliente(CodigoCliente);
+                var respota = new ExcluirClienteRepository().ExcluirCliente(CodigoCliente);
+                this.FindForm().Close();
             }
             else
             {
@@ -111,17 +103,11 @@ namespace DesafioCRUD.View
         {
             if (!isEdit)
             {
-                var cliente = new Cliente(txtNomeCliente.Text, txtSobrenomeCliente.Text, dtpDateNasc.Value, txtTelefone.Text, txtNomeRua.Text, txtNumCasa.Text, mtbCEP.Text, txtBairro.Text, txtCidade.Text, cbUF.Text, cbGenero.SelectedIndex.ToString());
-
-                return cliente;
-
+                return new Cliente(txtNomeCliente.Text, txtSobrenomeCliente.Text, dtpDateNasc.Value, txtTelefone.Text, txtNomeRua.Text, txtNumCasa.Text, mtbCEP.Text, txtBairro.Text, txtCidade.Text, cbUF.Text, cbGenero.SelectedIndex.ToString());
             }
             else
             {
-                var cliente = new Cliente(CodigoCliente, txtNomeCliente.Text, txtSobrenomeCliente.Text, dtpDateNasc.Value, txtTelefone.Text, txtNomeRua.Text, txtNumCasa.Text, mtbCEP.Text, txtBairro.Text, txtCidade.Text, cbUF.Text, cbGenero.SelectedIndex.ToString());
-
-                return cliente;
-
+                return new Cliente(CodigoCliente, txtNomeCliente.Text, txtSobrenomeCliente.Text, dtpDateNasc.Value, txtTelefone.Text, txtNomeRua.Text, txtNumCasa.Text, mtbCEP.Text, txtBairro.Text, txtCidade.Text, cbUF.Text, cbGenero.SelectedIndex.ToString());
             }
         }
 
@@ -142,7 +128,6 @@ namespace DesafioCRUD.View
 
         public DadosRetornoDTO ValidarCampos(Cliente cliente)
         {
-
             if (String.IsNullOrEmpty(cliente.Nome)) return new DadosRetornoDTO { MensagemErro = "Preencha Corretamente o nome do Cliente", Sucesso = false };
             if (String.IsNullOrEmpty(cliente.Sobrenome)) return new DadosRetornoDTO { MensagemErro = "Preencha Corretamente o sobrenome do Cliente", Sucesso = false };
             if (cliente.NumTelefone.Length != 14) return new DadosRetornoDTO { MensagemErro = "Preencha Corretamente o número de telefone", Sucesso = false };
@@ -154,9 +139,6 @@ namespace DesafioCRUD.View
             if (String.IsNullOrEmpty(txtBairro.Text)) return new DadosRetornoDTO { MensagemErro = "Preencha corretamente o bairro", Sucesso = false };
             if (String.IsNullOrEmpty(txtCidade.Text)) return new DadosRetornoDTO { MensagemErro = "Preencha Corretamento o nome da cidade", Sucesso = false };
             if (cbUF.Text.Length != 2) return new DadosRetornoDTO { MensagemErro = "Selecione corrtamente a UF", Sucesso = false };
-
-
-
 
             return new DadosRetornoDTO { Sucesso = true };
         }

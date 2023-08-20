@@ -15,14 +15,12 @@ namespace DesafioCRUD.Repositories
                     string query = "DELETE cliente WHERE id_Cliente = @id_Cliente";
 
                     var respota = conexao.Execute(query, new { id_Cliente });
-
                 }
 
                 return true;
             }
             catch (Exception error)
             {
-
                 throw new Exception($"Não foi possível remover o cliente \n Motivo: {error.Message}");
             }
 

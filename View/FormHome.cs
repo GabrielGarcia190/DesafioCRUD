@@ -9,13 +9,11 @@ namespace DesafioCRUD
         public FormHome()
         {
             InitializeComponent();
-
         }
 
         private void btnCadastrar_Click(object sender, EventArgs e)
         {
             var formDados = new formDadosCliente();
-
             formDados.ShowDialog();
 
         }
@@ -23,7 +21,6 @@ namespace DesafioCRUD
         private void btnListar_Click(object sender, EventArgs e)
         {
             var formList = new formListClientes();
-
             formList.ShowDialog();
         }
     }

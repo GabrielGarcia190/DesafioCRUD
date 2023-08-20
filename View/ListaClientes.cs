@@ -16,7 +16,7 @@ namespace DesafioCRUD.View
 
         private void formListClientes_Load(object sender, EventArgs e)
         {
-            var dados = new ListarClientes().Listar();
+            var dados = new ListarClientesController().ListarClientes();
 
             dgvListClientes.DataSource = dados;
         }
@@ -76,7 +76,6 @@ namespace DesafioCRUD.View
                         var respotas = new ConsultarClienteController().ConsultarClientePorNome(dadosBusca);
 
                         dgvListClientes.DataSource = respotas;
-
                         break;
                     }
             }

@@ -7,7 +7,6 @@ namespace DesafioCRUD.Controller
     {
         public bool EditarCliente(Cliente cliente)
         {
-
             return new EditarClientesRepository().AtualizarCadastro(cliente);
 
         }

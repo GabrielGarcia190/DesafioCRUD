@@ -58,17 +58,18 @@
   <ItemGroup>
     <Compile Include="ConexaoBanco.cs" />
     <Compile Include="Controller\ConsultarClienteController.cs" />
-    <Compile Include="Controller\CadastrarCliente.cs" />
+    <Compile Include="Controller\CadastrarClienteControoller.cs" />
     <Compile Include="Controller\EditarClienteController.cs" />
-    <Compile Include="Controller\ListarClientes.cs" />
+    <Compile Include="Controller\ListarClientesController.cs" />
     <Compile Include="DTO\DadosRetornoDTO.cs" />
-    <Compile Include="Enum\Genero.cs" />
     <Compile Include="Helpers\CalculaDataNascimento.cs" />
     <Compile Include="Helpers\SomenteNumeros.cs" />
     <Compile Include="Model\Cliente.cs" />
+    <Compile Include="Repositories\CadastrarClienteRepository.cs" />
     <Compile Include="Repositories\ConsultarClienteRepository.cs" />
     <Compile Include="Repositories\EditarClientesRepository.cs" />
     <Compile Include="Repositories\ExcluirClienteRepository.cs" />
+    <Compile Include="Repositories\ListarClienteRepository.cs" />
     <Compile Include="View\DadosCliente.cs">
       <SubType>Form</SubType>
     </Compile>

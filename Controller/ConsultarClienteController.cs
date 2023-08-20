@@ -1,7 +1,6 @@
 ﻿using DesafioCRUD.Helpers;
 using DesafioCRUD.Model;
 using DesafioCRUD.Repositories;
-using System;
 using System.Collections;
 
 namespace DesafioCRUD.Controller
@@ -10,38 +9,29 @@ namespace DesafioCRUD.Controller
     {
         public Cliente ConsultarCliente(int id_cliente)
         {
-            var dados_cliente = new ConsultarClienteRepository().BuscarPorId(id_cliente);
-            return dados_cliente;
+            return new ConsultarClienteRepository().BuscarPorId(id_cliente);
         }
-
         public IEnumerable ConsultarClientePorNome(string nome)
         {
-            var consultaCliente = new ConsultarClienteRepository().BuscarPorNome(nome);
-            return consultaCliente;
+            return new ConsultarClienteRepository().BuscarPorNome(nome);
         }
-
         public IEnumerable ConsultarClientePorIdade(int idade)
         {
             var datanascimento = new CalculaDataNascimento().CalcularDataNascimentoMinima(idade);
 
-            var consultarCliente = new ConsultarClienteRepository().BuscarPorDataNascimento(datanascimento);
-            return consultarCliente;
+            return new ConsultarClienteRepository().BuscarPorDataNascimento(datanascimento);
         }
         public IEnumerable ConsultarClientePorTelefone(string numTelefone)
         {
-            var consultarCliente = new ConsultarClienteRepository().BuscarPorTelefone(numTelefone);
-            return consultarCliente;
+            return new ConsultarClienteRepository().BuscarPorTelefone(numTelefone);
         }
         public IEnumerable ConsultarClientePorCidade(string cidade)
         {
-            var consultarCliente = new ConsultarClienteRepository().BuscarPorCidade(cidade);
-            return consultarCliente;
+            return new ConsultarClienteRepository().BuscarPorCidade(cidade);
         }
-
         public IEnumerable ConsultarClientePorGenero(string genero)
         {
-            var consultarCliente = new ConsultarClienteRepository().BuscarPorGenero(genero);
-            return consultarCliente;
+            return new ConsultarClienteRepository().BuscarPorGenero(genero);
         }
     }
 }
