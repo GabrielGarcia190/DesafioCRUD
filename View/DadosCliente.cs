@@ -90,8 +90,14 @@ namespace DesafioCRUD.View
         {
             if (isEdit)
             {
-                var respota = new ExcluirClienteRepository().ExcluirCliente(CodigoCliente);
-                this.FindForm().Close();
+                var confirmação = MensagemConfirmação(true);
+                if (confirmação)
+                {
+                    new ExcluirClienteRepository().ExcluirCliente(CodigoCliente);
+
+                    MessageBox.Show("Cliente removido com sucesso");
+                    this.FindForm().Close();
+                }
             }
             else
             {
@@ -135,7 +141,7 @@ namespace DesafioCRUD.View
             if (String.IsNullOrEmpty(cliente.NomeRua)) return new DadosRetornoDTO { MensagemErro = "Preencha Corretamente o nome da rua", Sucesso = false };
             if (cliente.Genero == "-1") return new DadosRetornoDTO { MensagemErro = "Preencha corrtamente o genêro", Sucesso = false };
             if (cliente.NumeroCasa.Length > 10) return new DadosRetornoDTO { MensagemErro = "Por favor preencha corretamente o número da casa", Sucesso = false };
-            if (cliente.Cep.Length != 9) return new DadosRetornoDTO { MensagemErro = "O número da casa está muito extenso, por favor preencha corretamente", Sucesso = false };
+            if (cliente.Cep.Length != 9) return new DadosRetornoDTO { MensagemErro = "Preencha corretamente o número da casa", Sucesso = false };
             if (String.IsNullOrEmpty(txtBairro.Text)) return new DadosRetornoDTO { MensagemErro = "Preencha corretamente o bairro", Sucesso = false };
             if (String.IsNullOrEmpty(txtCidade.Text)) return new DadosRetornoDTO { MensagemErro = "Preencha Corretamento o nome da cidade", Sucesso = false };
             if (cbUF.Text.Length != 2) return new DadosRetornoDTO { MensagemErro = "Selecione corrtamente a UF", Sucesso = false };
@@ -145,24 +151,36 @@ namespace DesafioCRUD.View
 
         private void checkAtivo_CheckedChanged(object sender, EventArgs e)
         {
-            var resposta = MensagemConfirmação();
+            var resposta = MensagemConfirmação(false);
 
             if (resposta)
             {
                 new DesativarClienteRepository().DesativarCliete(CodigoCliente);
 
                 MessageBox.Show("Cliente Desativado Com Sucesso!");
-                
+
                 this.FindForm().Close();
             }
 
+            this.FindForm().Close();
+
         }
 
-        public static bool MensagemConfirmação()
+        public static bool MensagemConfirmação(bool isDelete)
         {
-            DialogResult result = MessageBox.Show("Deseja continuar?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            DialogResult result;
 
-            if(result == DialogResult.Yes)
+            if (isDelete)
+            {
+                result = MessageBox.Show("Tem certeza que gostariad de excluir permanentemente este cliente? \n Esta ação não pode ser desfeita", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+                if (result == DialogResult.Yes)
+                {
+                    return true;
+                }
+            }
+
+            result = MessageBox.Show("Tem certeza que seja desativar o cliente? \n OBS: Ele não irá aparecer mais em nenhuma listagem", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
             {
                 return true;
             }

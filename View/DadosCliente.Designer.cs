@@ -151,16 +151,18 @@
             // 
             this.dtpDateNasc.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtpDateNasc.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpDateNasc.Location = new System.Drawing.Point(327, 259);
+            this.dtpDateNasc.Location = new System.Drawing.Point(303, 259);
+            this.dtpDateNasc.MaxDate = new System.DateTime(2100, 12, 31, 0, 0, 0, 0);
+            this.dtpDateNasc.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.dtpDateNasc.Name = "dtpDateNasc";
-            this.dtpDateNasc.Size = new System.Drawing.Size(172, 27);
+            this.dtpDateNasc.Size = new System.Drawing.Size(205, 27);
             this.dtpDateNasc.TabIndex = 4;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(323, 234);
+            this.label6.Location = new System.Drawing.Point(314, 231);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(176, 22);
             this.label6.TabIndex = 0;
