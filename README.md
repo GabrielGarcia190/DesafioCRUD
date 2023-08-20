@@ -36,5 +36,4 @@ INSERT INTO genero(nomeGenero) VALUE('OUTROS')
 
 </code>
 
-Link do arquivo .bak para download: 
-[Link do](https://drive.google.com/file/d/1vnvShEP7mK-pHl91RImy7nCG9UndNr14/view?usp=sharing)https://drive.google.com/file/d/1vnvShEP7mK-pHl91RImy7nCG9UndNr14/view?usp=sharing
+[Link do arquivo .bak para download: ](https://drive.google.com/file/d/1vnvShEP7mK-pHl91RImy7nCG9UndNr14/view?usp=sharing)https://drive.google.com/file/d/1vnvShEP7mK-pHl91RImy7nCG9UndNr14/view?usp=sharing
