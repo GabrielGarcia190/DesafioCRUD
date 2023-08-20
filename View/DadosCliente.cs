@@ -142,5 +142,32 @@ namespace DesafioCRUD.View
 
             return new DadosRetornoDTO { Sucesso = true };
         }
+
+        private void checkAtivo_CheckedChanged(object sender, EventArgs e)
+        {
+            var resposta = MensagemConfirmação();
+
+            if (resposta)
+            {
+                new DesativarClienteRepository().DesativarCliete(CodigoCliente);
+
+                MessageBox.Show("Cliente Desativado Com Sucesso!");
+                
+                this.FindForm().Close();
+            }
+
+        }
+
+        public static bool MensagemConfirmação()
+        {
+            DialogResult result = MessageBox.Show("Deseja continuar?", "Confirmação", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+            if(result == DialogResult.Yes)
+            {
+                return true;
+            }
+
+            return false;
+        }
     }
 }

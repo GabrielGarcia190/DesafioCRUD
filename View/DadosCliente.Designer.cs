@@ -371,6 +371,7 @@
             this.checkAtivo.Text = "Ativo";
             this.checkAtivo.UseVisualStyleBackColor = true;
             this.checkAtivo.Visible = false;
+            this.checkAtivo.CheckedChanged += new System.EventHandler(this.checkAtivo_CheckedChanged);
             // 
             // formDadosCliente
             // 
