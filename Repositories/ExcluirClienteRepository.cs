@@ -14,7 +14,7 @@ namespace DesafioCRUD.Repositories
                 {
                     string query = "DELETE cliente WHERE id_Cliente = @id_Cliente";
 
-                    var respota = conexao.Execute(query, new { id_Cliente });
+                    conexao.Execute(query, new { id_Cliente });
                 }
 
                 return true;

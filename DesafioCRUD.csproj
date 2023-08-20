@@ -67,6 +67,7 @@
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Repositories\CadastrarClienteRepository.cs" />
     <Compile Include="Repositories\ConsultarClienteRepository.cs" />
+    <Compile Include="Repositories\DesativarClienteRepository.cs" />
     <Compile Include="Repositories\EditarClientesRepository.cs" />
     <Compile Include="Repositories\ExcluirClienteRepository.cs" />
     <Compile Include="Repositories\ListarClienteRepository.cs" />

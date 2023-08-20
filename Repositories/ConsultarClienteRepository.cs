@@ -10,7 +10,7 @@ namespace DesafioCRUD.Repositories
 {
     public class ConsultarClienteRepository
     {
-        string query = "SELECT c.id_Cliente, C.nome_Cliente AS 'Nome', c.sobrenome, c.dataNascimento, c.numTelefone, c.Rua AS 'NomeRua', c.numero AS 'NumeroCasa', c.cep, c.Bairro, c.Cidade, c.UF , g.nomeGenero AS 'Genero' FROM Cliente c INNER JOIN Genero g ON c.id_genero = g.id_genero WHERE ";
+        string query = "SELECT c.id_Cliente, C.nome_Cliente AS 'Nome', c.sobrenome, c.dataNascimento, c.numTelefone, c.Rua AS 'NomeRua', c.numero AS 'NumeroCasa', c.cep, c.Bairro, c.Cidade, c.UF , g.nomeGenero AS 'Genero' FROM Cliente c INNER JOIN Genero g ON c.id_genero = g.id_genero WHERE c.Ativo = 1 AND ";
         public Cliente BuscarPorId(int id_cliente)
         {
             using (var conexao = ConexaoBanco.ObterConexao())
