@@ -13,7 +13,7 @@ namespace DesafioCRUD.Repositories
             {
                 using (var conexao = ConexaoBanco.ObterConexao())
                 {
-                    string query = "INSERT INTO Cliente (nome_Cliente, sobrenome, dataNascimento, numTelefone, Rua, numero, cep, Bairro, Cidade, UF, id_genero) VALUES (@nome, @sobrenome, @DataNascimento, @numTelefone, @nomeRua, @NumeroCasa, @cep, @bairro, @cidade, @UF, @genero);";
+                    string query = "INSERT INTO Cliente (nome_Cliente, sobrenome, dataNascimento, numTelefone, Rua, numero, cep, Bairro, Cidade, UF, id_genero, ativo) VALUES (@nome, @sobrenome, @DataNascimento, @numTelefone, @nomeRua, @NumeroCasa, @cep, @bairro, @cidade, @UF, @genero, 1);";
                     conexao.Execute(query, new Cliente(cliente.Nome, cliente.Sobrenome, cliente.DataNascimento, cliente.NumTelefone, cliente.NomeRua, cliente.NumeroCasa, cliente.Cep, cliente.Bairro, cliente.Cidade, cliente.Uf, "2"));
                     return true;
                 }
