@@ -62,8 +62,6 @@
     <Compile Include="Controller\EditarClienteController.cs" />
     <Compile Include="Controller\ListarClientesController.cs" />
     <Compile Include="DTO\DadosRetornoDTO.cs" />
-    <Compile Include="Helpers\CalculaDataNascimento.cs" />
-    <Compile Include="Helpers\SomenteNumeros.cs" />
     <Compile Include="Model\Cliente.cs" />
     <Compile Include="Repositories\CadastrarClienteRepository.cs" />
     <Compile Include="Repositories\ConsultarClienteRepository.cs" />
