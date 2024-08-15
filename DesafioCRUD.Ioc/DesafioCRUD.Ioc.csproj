@@ -10,4 +10,9 @@
     <PackageReference Include="Ninject" Version="3.3.6" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DesafioCRUD.Domain\DesafioCRUD.Domain.csproj" />
+    <ProjectReference Include="..\DesafioCRUD.Infra\DesafioCRUD.Infra.csproj" />
+  </ItemGroup>
+
 </Project>

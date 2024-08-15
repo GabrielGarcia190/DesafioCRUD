@@ -3,13 +3,15 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33829.357
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioCRUD", "DesafioCRUD.csproj", "{A0A2F931-0BF1-4EFB-A651-E2106ABDB637}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioCRUD", "DesafioCRUD.csproj", "{A0A2F931-0BF1-4EFB-A651-E2106ABDB637}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioCRUD.Domain", "..\DesafioCRUD.Domain\DesafioCRUD.Domain.csproj", "{661846E8-825A-4DDB-A2B8-C20AD8D42132}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioCRUD.Domain", "..\DesafioCRUD.Domain\DesafioCRUD.Domain.csproj", "{661846E8-825A-4DDB-A2B8-C20AD8D42132}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioCRUD.Infra", "..\DesafioCRUD.Infra\DesafioCRUD.Infra.csproj", "{0E0A4CAE-D30E-4AF8-A736-D10F25423026}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioCRUD.Infra", "..\DesafioCRUD.Infra\DesafioCRUD.Infra.csproj", "{0E0A4CAE-D30E-4AF8-A736-D10F25423026}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioCRUD.App", "..\DesafioCRUD.App\DesafioCRUD.App.csproj", "{60918464-72DB-4135-9D8D-D344209B2542}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesafioCRUD.App", "..\DesafioCRUD.App\DesafioCRUD.App.csproj", "{60918464-72DB-4135-9D8D-D344209B2542}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesafioCRUD.Ioc", "..\DesafioCRUD.Ioc\DesafioCRUD.Ioc.csproj", "{3A421D00-F028-45F1-944E-C7D2E30A56DF}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{60918464-72DB-4135-9D8D-D344209B2542}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60918464-72DB-4135-9D8D-D344209B2542}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60918464-72DB-4135-9D8D-D344209B2542}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A421D00-F028-45F1-944E-C7D2E30A56DF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A421D00-F028-45F1-944E-C7D2E30A56DF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A421D00-F028-45F1-944E-C7D2E30A56DF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A421D00-F028-45F1-944E-C7D2E30A56DF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
