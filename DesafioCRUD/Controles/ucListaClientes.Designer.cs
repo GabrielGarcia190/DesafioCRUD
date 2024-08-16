@@ -52,7 +52,7 @@
             panel1.Controls.Add(materialButton1);
             panel1.Location = new Point(3, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(2139, 1328);
+            panel1.Size = new Size(2221, 1338);
             panel1.TabIndex = 0;
             // 
             // btnRemover
@@ -93,6 +93,7 @@
             // 
             // gvClientes
             // 
+            gvClientes.AllowUserToAddRows = false;
             gvClientes.BackgroundColor = SystemColors.Control;
             gvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gvClientes.Columns.AddRange(new DataGridViewColumn[] { NomeCliente, DataNascimento, Cidade, Idade, UF, CodigoCliente });
@@ -179,7 +180,7 @@
             BackColor = SystemColors.Control;
             Controls.Add(panel1);
             Name = "ucListaClientes";
-            Size = new Size(1470, 672);
+            Size = new Size(1552, 682);
             Load += ucListaClientes_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
