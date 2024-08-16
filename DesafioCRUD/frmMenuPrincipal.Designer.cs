@@ -29,18 +29,20 @@
         private void InitializeComponent()
         {
             panelMenu = new Panel();
-            button1 = new Button();
+            btnListar = new Button();
             btnAdicionar = new Button();
             panel1 = new Panel();
             pnMenu = new Panel();
+            materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
             panelMenu.SuspendLayout();
+            pnMenu.SuspendLayout();
             SuspendLayout();
             // 
             // panelMenu
             // 
             panelMenu.BackColor = Color.FromArgb(51, 51, 76);
             panelMenu.BorderStyle = BorderStyle.FixedSingle;
-            panelMenu.Controls.Add(button1);
+            panelMenu.Controls.Add(btnListar);
             panelMenu.Controls.Add(btnAdicionar);
             panelMenu.Controls.Add(panel1);
             panelMenu.Dock = DockStyle.Left;
@@ -49,22 +51,24 @@
             panelMenu.Size = new Size(220, 542);
             panelMenu.TabIndex = 0;
             // 
-            // button1
+            // btnListar
             // 
-            button1.Dock = DockStyle.Top;
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Font = new Font("Noto Sans", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
-            button1.ForeColor = Color.GhostWhite;
-            button1.ImageAlign = ContentAlignment.MiddleLeft;
-            button1.Location = new Point(0, 140);
-            button1.Name = "button1";
-            button1.Size = new Size(218, 60);
-            button1.TabIndex = 2;
-            button1.Text = "     LISTAR";
-            button1.TextAlign = ContentAlignment.MiddleLeft;
-            button1.TextImageRelation = TextImageRelation.ImageBeforeText;
-            button1.UseVisualStyleBackColor = true;
+            btnListar.Dock = DockStyle.Top;
+            btnListar.FlatAppearance.BorderSize = 0;
+            btnListar.FlatStyle = FlatStyle.Flat;
+            btnListar.Font = new Font("Noto Sans", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
+            btnListar.ForeColor = Color.GhostWhite;
+            btnListar.Image = Properties.Resources.list;
+            btnListar.ImageAlign = ContentAlignment.MiddleLeft;
+            btnListar.Location = new Point(0, 140);
+            btnListar.Name = "btnListar";
+            btnListar.Size = new Size(218, 60);
+            btnListar.TabIndex = 2;
+            btnListar.Text = "     LISTAR";
+            btnListar.TextAlign = ContentAlignment.MiddleLeft;
+            btnListar.TextImageRelation = TextImageRelation.ImageBeforeText;
+            btnListar.UseVisualStyleBackColor = true;
+            btnListar.Click += btnListar_Click;
             // 
             // btnAdicionar
             // 
@@ -73,6 +77,7 @@
             btnAdicionar.FlatStyle = FlatStyle.Flat;
             btnAdicionar.Font = new Font("Noto Sans", 9.75F, FontStyle.Bold, GraphicsUnit.Point);
             btnAdicionar.ForeColor = Color.GhostWhite;
+            btnAdicionar.Image = Properties.Resources.pencil;
             btnAdicionar.ImageAlign = ContentAlignment.MiddleLeft;
             btnAdicionar.Location = new Point(0, 80);
             btnAdicionar.Name = "btnAdicionar";
@@ -82,6 +87,7 @@
             btnAdicionar.TextAlign = ContentAlignment.MiddleLeft;
             btnAdicionar.TextImageRelation = TextImageRelation.ImageBeforeText;
             btnAdicionar.UseVisualStyleBackColor = true;
+            btnAdicionar.Click += btnAdicionar_Click;
             // 
             // panel1
             // 
@@ -94,10 +100,24 @@
             // 
             // pnMenu
             // 
+            pnMenu.AutoSize = true;
+            pnMenu.Controls.Add(materialLabel1);
             pnMenu.Location = new Point(226, 12);
             pnMenu.Name = "pnMenu";
             pnMenu.Size = new Size(562, 518);
             pnMenu.TabIndex = 1;
+            // 
+            // materialLabel1
+            // 
+            materialLabel1.AutoSize = true;
+            materialLabel1.Depth = 0;
+            materialLabel1.Font = new Font("Roboto", 14F, FontStyle.Regular, GraphicsUnit.Pixel);
+            materialLabel1.Location = new Point(147, 240);
+            materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
+            materialLabel1.Name = "materialLabel1";
+            materialLabel1.Size = new Size(252, 19);
+            materialLabel1.TabIndex = 0;
+            materialLabel1.Text = "Selcione uma das opções na lateral";
             // 
             // frmMenuPrincipal
             // 
@@ -109,7 +129,10 @@
             Name = "frmMenuPrincipal";
             Text = "Form1";
             panelMenu.ResumeLayout(false);
+            pnMenu.ResumeLayout(false);
+            pnMenu.PerformLayout();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
@@ -117,8 +140,9 @@
         private Panel panelMenu;
         private Panel panel1;
         private Button btnAdicionar;
-        private Button button1;
+        private Button btnListar;
         private Panel panel2;
         private Panel pnMenu;
+        private MaterialSkin.Controls.MaterialLabel materialLabel1;
     }
 }

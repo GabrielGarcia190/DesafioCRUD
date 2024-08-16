@@ -4,7 +4,7 @@
     {
         public ControleBase()
         {
-            InitializeComponent();
+            this.Dock = DockStyle.Fill;
         }
     }
 }

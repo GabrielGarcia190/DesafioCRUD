@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net7.0</TargetFramework>
@@ -8,10 +8,6 @@
 
   <ItemGroup>
     <PackageReference Include="Ninject" Version="3.3.6" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="Entities\Clientes\" />
   </ItemGroup>
 
 </Project>

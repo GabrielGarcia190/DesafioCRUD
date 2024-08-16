@@ -12,6 +12,9 @@ public static class ControleFactory
 
                 return new ucListaClientes();
 
+            case ETipoPanel.Adicionar:
+                return new ucAdicionarCliente();
+
             default:
                 return new ucListaClientes();
         }

@@ -11,8 +11,6 @@ public partial class frmMenuPrincipal : Form
     public frmMenuPrincipal()
     {
         InitializeComponent();
-
-        ConfigurarControle(ETipoPanel.Listar);
     }
 
     private void ConfigurarControle(ETipoPanel tipoPanel)
@@ -25,10 +23,23 @@ public partial class frmMenuPrincipal : Form
         pnMenu.Controls.Add(controle);
     }
 
-    private void button3_Click(object sender, EventArgs e)
+    private void btnAdicionar_Click(object sender, EventArgs e)
     {
-        var servico = Config.Kernel.TryGet<ClienteAppService>();
+        CustomizarBotaoSelecionado(btnAdicionar, btnListar);
 
-        var teste = servico.ObterClientes();
+        ConfigurarControle(ETipoPanel.Adicionar);
+    }
+
+    private void btnListar_Click(object sender, EventArgs e)
+    {
+        CustomizarBotaoSelecionado(btnListar, btnAdicionar);
+
+        ConfigurarControle(ETipoPanel.Listar);
+    }
+
+    private void CustomizarBotaoSelecionado(Button botaoSelecionado, Button outroBotao)
+    {
+        botaoSelecionado.BackColor = Color.FromArgb(red: 39, green: 39, blue: 58);
+        outroBotao.BackColor = Color.FromArgb(red: 51, green: 51, blue: 76);
     }
 }
