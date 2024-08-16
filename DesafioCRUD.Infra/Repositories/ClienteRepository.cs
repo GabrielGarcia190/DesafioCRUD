@@ -1,8 +1,9 @@
 ﻿using Dapper;
-using DesafioCRUD.Domain.Cliente.Repositories;
+using DesafioCRUD.Domain.Repositories;
+using DesafioCRUD.Domain.Results;
 using System.Data.SqlClient;
 
-namespace DesafioCRUD.Infra.Clientes.Repositories
+namespace DesafioCRUD.Infra.Repositories
 {
 
     public class ClienteRepository : IClienteRepository
@@ -16,7 +17,7 @@ namespace DesafioCRUD.Infra.Clientes.Repositories
         {
             using var conexao = new SqlConnection(_configuracoes.ConnectionString);
 
-            return conexao.Query<object>("SELECT * FROM Cliente");
+            return conexao.Query<ClienteCadastroResult>("SELECT * FROM Cliente");
         }
     }
 }

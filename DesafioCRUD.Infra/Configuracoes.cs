@@ -6,7 +6,7 @@
 
         public Configuracoes()
         {
-            ConnectionString = "Data Source=[Nome_do_Servidor]\\[Nome_da_Instancia];Initial Catalog=[Nome_do_Banco];Integrated Security=True";
+            ConnectionString = "Data Source=GARCIA-DELLG15\\SQLEXPRESS;Initial Catalog=DesafioCRUD;Integrated Security=True";
         }
     }
 }

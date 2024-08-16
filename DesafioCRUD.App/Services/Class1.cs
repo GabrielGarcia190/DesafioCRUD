@@ -1,4 +1,4 @@
-﻿using DesafioCRUD.Domain.Cliente.Repositories;
+﻿using DesafioCRUD.Domain.Repositories;
 
 namespace DesafioCRUD.App.Services
 {

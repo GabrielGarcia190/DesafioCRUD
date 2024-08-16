@@ -1,6 +1,6 @@
-﻿using DesafioCRUD.Domain.Cliente.Repositories;
+﻿using DesafioCRUD.Domain.Repositories;
 using DesafioCRUD.Infra;
-using DesafioCRUD.Infra.Clientes.Repositories;
+using DesafioCRUD.Infra.Repositories;
 using Ninject;
 
 namespace DesafioCRUD.Ioc

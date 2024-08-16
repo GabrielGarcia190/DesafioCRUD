@@ -1,4 +1,4 @@
-﻿namespace DesafioCRUD.Domain.Cliente.Repositories
+﻿namespace DesafioCRUD.Domain.Repositories
 {
     public interface IClienteRepository
     {

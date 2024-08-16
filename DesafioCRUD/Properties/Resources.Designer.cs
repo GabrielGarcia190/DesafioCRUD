@@ -63,9 +63,9 @@ namespace DesafioCRUD.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap user_plus {
+        internal static System.Drawing.Bitmap list {
             get {
-                object obj = ResourceManager.GetObject("user-plus", resourceCulture);
+                object obj = ResourceManager.GetObject("list", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -73,9 +73,19 @@ namespace DesafioCRUD.Properties {
         /// <summary>
         ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap user_plus__1_ {
+        internal static System.Drawing.Bitmap pencil {
             get {
-                object obj = ResourceManager.GetObject("user-plus (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("pencil", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Consulta um recurso localizado do tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap user_plus {
+            get {
+                object obj = ResourceManager.GetObject("user-plus", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
