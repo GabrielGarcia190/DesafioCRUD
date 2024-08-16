@@ -29,31 +29,31 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
-            materialButton1 = new MaterialSkin.Controls.MaterialButton();
-            btnRemover = new Button();
+            btnSalvar = new MaterialSkin.Controls.MaterialButton();
+            btnLimparCampos = new Button();
             materialLabel12 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel11 = new MaterialSkin.Controls.MaterialLabel();
-            textBox8 = new TextBox();
-            textBox7 = new TextBox();
+            txtUf = new TextBox();
+            txtCidade = new TextBox();
             materialLabel10 = new MaterialSkin.Controls.MaterialLabel();
-            textBox6 = new TextBox();
+            txtCEP = new TextBox();
             materialLabel9 = new MaterialSkin.Controls.MaterialLabel();
-            textBox5 = new TextBox();
+            txtNumero = new TextBox();
             materialLabel8 = new MaterialSkin.Controls.MaterialLabel();
-            textBox4 = new TextBox();
+            txtBairro = new TextBox();
             materialLabel7 = new MaterialSkin.Controls.MaterialLabel();
-            textBox3 = new TextBox();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
+            txtNomeRua = new TextBox();
+            cbEstadoCivil = new ComboBox();
+            cbGenero = new ComboBox();
             materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
-            textBox2 = new TextBox();
+            txtTelefone = new TextBox();
             materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             dtpDataNascimento = new DateTimePicker();
             materialLabel2 = new MaterialSkin.Controls.MaterialLabel();
             materialLabel1 = new MaterialSkin.Controls.MaterialLabel();
-            textBox1 = new TextBox();
+            txtNome = new TextBox();
             panel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,69 +61,71 @@
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
             panel1.BackColor = SystemColors.Control;
-            panel1.Controls.Add(materialButton1);
-            panel1.Controls.Add(btnRemover);
+            panel1.Controls.Add(btnSalvar);
+            panel1.Controls.Add(btnLimparCampos);
             panel1.Controls.Add(materialLabel12);
             panel1.Controls.Add(materialLabel11);
-            panel1.Controls.Add(textBox8);
-            panel1.Controls.Add(textBox7);
+            panel1.Controls.Add(txtUf);
+            panel1.Controls.Add(txtCidade);
             panel1.Controls.Add(materialLabel10);
-            panel1.Controls.Add(textBox6);
+            panel1.Controls.Add(txtCEP);
             panel1.Controls.Add(materialLabel9);
-            panel1.Controls.Add(textBox5);
+            panel1.Controls.Add(txtNumero);
             panel1.Controls.Add(materialLabel8);
-            panel1.Controls.Add(textBox4);
+            panel1.Controls.Add(txtBairro);
             panel1.Controls.Add(materialLabel7);
-            panel1.Controls.Add(textBox3);
-            panel1.Controls.Add(comboBox2);
-            panel1.Controls.Add(comboBox1);
+            panel1.Controls.Add(txtNomeRua);
+            panel1.Controls.Add(cbEstadoCivil);
+            panel1.Controls.Add(cbGenero);
             panel1.Controls.Add(materialLabel6);
             panel1.Controls.Add(materialLabel5);
-            panel1.Controls.Add(textBox2);
+            panel1.Controls.Add(txtTelefone);
             panel1.Controls.Add(materialLabel4);
             panel1.Controls.Add(materialLabel3);
             panel1.Controls.Add(dtpDataNascimento);
             panel1.Controls.Add(materialLabel2);
             panel1.Controls.Add(materialLabel1);
-            panel1.Controls.Add(textBox1);
+            panel1.Controls.Add(txtNome);
             panel1.Location = new Point(14, 13);
             panel1.Name = "panel1";
-            panel1.Size = new Size(562, 518);
+            panel1.Size = new Size(5738, 1978);
             panel1.TabIndex = 0;
             // 
-            // materialButton1
+            // btnSalvar
             // 
-            materialButton1.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-            materialButton1.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
-            materialButton1.Depth = 0;
-            materialButton1.HighEmphasis = true;
-            materialButton1.Icon = null;
-            materialButton1.Location = new Point(455, 455);
-            materialButton1.Margin = new Padding(4, 6, 4, 6);
-            materialButton1.MouseState = MaterialSkin.MouseState.HOVER;
-            materialButton1.Name = "materialButton1";
-            materialButton1.NoAccentTextColor = Color.Empty;
-            materialButton1.Size = new Size(76, 36);
-            materialButton1.TabIndex = 24;
-            materialButton1.Text = "SALVAR";
-            materialButton1.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
-            materialButton1.UseAccentColor = false;
-            materialButton1.UseVisualStyleBackColor = true;
+            btnSalvar.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            btnSalvar.Density = MaterialSkin.Controls.MaterialButton.MaterialButtonDensity.Default;
+            btnSalvar.Depth = 0;
+            btnSalvar.HighEmphasis = true;
+            btnSalvar.Icon = null;
+            btnSalvar.Location = new Point(455, 455);
+            btnSalvar.Margin = new Padding(4, 6, 4, 6);
+            btnSalvar.MouseState = MaterialSkin.MouseState.HOVER;
+            btnSalvar.Name = "btnSalvar";
+            btnSalvar.NoAccentTextColor = Color.Empty;
+            btnSalvar.Size = new Size(76, 36);
+            btnSalvar.TabIndex = 24;
+            btnSalvar.Text = "SALVAR";
+            btnSalvar.Type = MaterialSkin.Controls.MaterialButton.MaterialButtonType.Contained;
+            btnSalvar.UseAccentColor = false;
+            btnSalvar.UseVisualStyleBackColor = true;
+            btnSalvar.Click += btnSalvar_Click;
             // 
-            // btnRemover
+            // btnLimparCampos
             // 
-            btnRemover.BackColor = Color.Red;
-            btnRemover.FlatAppearance.BorderSize = 0;
-            btnRemover.FlatStyle = FlatStyle.Popup;
-            btnRemover.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            btnRemover.ForeColor = SystemColors.Control;
-            btnRemover.Location = new Point(21, 455);
-            btnRemover.Name = "btnRemover";
-            btnRemover.Size = new Size(121, 36);
-            btnRemover.TabIndex = 4;
-            btnRemover.Text = "LIMPAR CAMPOS";
-            btnRemover.UseMnemonic = false;
-            btnRemover.UseVisualStyleBackColor = false;
+            btnLimparCampos.BackColor = Color.Red;
+            btnLimparCampos.FlatAppearance.BorderSize = 0;
+            btnLimparCampos.FlatStyle = FlatStyle.Popup;
+            btnLimparCampos.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            btnLimparCampos.ForeColor = SystemColors.Control;
+            btnLimparCampos.Location = new Point(21, 455);
+            btnLimparCampos.Name = "btnLimparCampos";
+            btnLimparCampos.Size = new Size(121, 36);
+            btnLimparCampos.TabIndex = 4;
+            btnLimparCampos.Text = "LIMPAR CAMPOS";
+            btnLimparCampos.UseMnemonic = false;
+            btnLimparCampos.UseVisualStyleBackColor = false;
+            btnLimparCampos.Click += btnRemover_Click;
             // 
             // materialLabel12
             // 
@@ -151,21 +153,23 @@
             materialLabel11.TabIndex = 22;
             materialLabel11.Text = "Cidade";
             // 
-            // textBox8
+            // txtUf
             // 
-            textBox8.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox8.Location = new Point(490, 349);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(41, 23);
-            textBox8.TabIndex = 21;
+            txtUf.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtUf.Location = new Point(490, 349);
+            txtUf.MaxLength = 2;
+            txtUf.Name = "txtUf";
+            txtUf.Size = new Size(41, 23);
+            txtUf.TabIndex = 21;
             // 
-            // textBox7
+            // txtCidade
             // 
-            textBox7.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox7.Location = new Point(292, 349);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(166, 23);
-            textBox7.TabIndex = 20;
+            txtCidade.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCidade.Location = new Point(292, 349);
+            txtCidade.MaxLength = 100;
+            txtCidade.Name = "txtCidade";
+            txtCidade.Size = new Size(166, 23);
+            txtCidade.TabIndex = 20;
             // 
             // materialLabel10
             // 
@@ -180,13 +184,14 @@
             materialLabel10.TabIndex = 19;
             materialLabel10.Text = "CEP:";
             // 
-            // textBox6
+            // txtCEP
             // 
-            textBox6.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox6.Location = new Point(137, 349);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(120, 23);
-            textBox6.TabIndex = 18;
+            txtCEP.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtCEP.Location = new Point(137, 349);
+            txtCEP.MaxLength = 9;
+            txtCEP.Name = "txtCEP";
+            txtCEP.Size = new Size(120, 23);
+            txtCEP.TabIndex = 18;
             // 
             // materialLabel9
             // 
@@ -201,13 +206,14 @@
             materialLabel9.TabIndex = 17;
             materialLabel9.Text = "Numero:";
             // 
-            // textBox5
+            // txtNumero
             // 
-            textBox5.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox5.Location = new Point(21, 349);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(86, 23);
-            textBox5.TabIndex = 16;
+            txtNumero.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNumero.Location = new Point(21, 349);
+            txtNumero.MaxLength = 8;
+            txtNumero.Name = "txtNumero";
+            txtNumero.Size = new Size(86, 23);
+            txtNumero.TabIndex = 16;
             // 
             // materialLabel8
             // 
@@ -222,13 +228,14 @@
             materialLabel8.TabIndex = 15;
             materialLabel8.Text = "Bairro:";
             // 
-            // textBox4
+            // txtBairro
             // 
-            textBox4.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox4.Location = new Point(365, 286);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(166, 23);
-            textBox4.TabIndex = 14;
+            txtBairro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtBairro.Location = new Point(365, 286);
+            txtBairro.MaxLength = 100;
+            txtBairro.Name = "txtBairro";
+            txtBairro.Size = new Size(166, 23);
+            txtBairro.TabIndex = 14;
             // 
             // materialLabel7
             // 
@@ -243,29 +250,32 @@
             materialLabel7.TabIndex = 13;
             materialLabel7.Text = "Nome da Rua";
             // 
-            // textBox3
+            // txtNomeRua
             // 
-            textBox3.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox3.Location = new Point(21, 286);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(321, 23);
-            textBox3.TabIndex = 12;
+            txtNomeRua.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNomeRua.Location = new Point(21, 286);
+            txtNomeRua.MaxLength = 100;
+            txtNomeRua.Name = "txtNomeRua";
+            txtNomeRua.Size = new Size(321, 23);
+            txtNomeRua.TabIndex = 12;
             // 
-            // comboBox2
+            // cbEstadoCivil
             // 
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(177, 110);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(165, 23);
-            comboBox2.TabIndex = 11;
+            cbEstadoCivil.FormattingEnabled = true;
+            cbEstadoCivil.Location = new Point(177, 110);
+            cbEstadoCivil.Name = "cbEstadoCivil";
+            cbEstadoCivil.Size = new Size(165, 23);
+            cbEstadoCivil.TabIndex = 11;
+            cbEstadoCivil.Text = "Selecione";
             // 
-            // comboBox1
+            // cbGenero
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(21, 110);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(121, 23);
-            comboBox1.TabIndex = 10;
+            cbGenero.FormattingEnabled = true;
+            cbGenero.Location = new Point(21, 110);
+            cbGenero.Name = "cbGenero";
+            cbGenero.Size = new Size(121, 23);
+            cbGenero.TabIndex = 10;
+            cbGenero.Text = "Selecione";
             // 
             // materialLabel6
             // 
@@ -293,13 +303,14 @@
             materialLabel5.TabIndex = 8;
             materialLabel5.Text = "Telefone";
             // 
-            // textBox2
+            // txtTelefone
             // 
-            textBox2.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(365, 110);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(166, 23);
-            textBox2.TabIndex = 7;
+            txtTelefone.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtTelefone.Location = new Point(365, 110);
+            txtTelefone.MaxLength = 100;
+            txtTelefone.Name = "txtTelefone";
+            txtTelefone.Size = new Size(166, 23);
+            txtTelefone.TabIndex = 7;
             // 
             // materialLabel4
             // 
@@ -362,13 +373,14 @@
             materialLabel1.TabIndex = 1;
             materialLabel1.Text = "Nome do Cliente:";
             // 
-            // textBox1
+            // txtNome
             // 
-            textBox1.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(21, 39);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(321, 23);
-            textBox1.TabIndex = 2;
+            txtNome.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            txtNome.Location = new Point(21, 39);
+            txtNome.MaxLength = 100;
+            txtNome.Name = "txtNome";
+            txtNome.Size = new Size(321, 23);
+            txtNome.TabIndex = 2;
             // 
             // ucAdicionarCliente
             // 
@@ -379,6 +391,7 @@
             Controls.Add(panel1);
             Name = "ucAdicionarCliente";
             Size = new Size(562, 518);
+            Load += ucAdicionarCliente_Load;
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             ResumeLayout(false);
@@ -388,29 +401,29 @@
 
         private Panel panel1;
         private MaterialSkin.Controls.MaterialLabel materialLabel1;
-        private TextBox textBox1;
+        private TextBox txtNome;
         private DateTimePicker dtpDataNascimento;
         private MaterialSkin.Controls.MaterialLabel materialLabel2;
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel8;
-        private TextBox textBox4;
+        private TextBox txtBairro;
         private MaterialSkin.Controls.MaterialLabel materialLabel7;
-        private TextBox textBox3;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private TextBox txtNomeRua;
+        private ComboBox cbEstadoCivil;
+        private ComboBox cbGenero;
         private MaterialSkin.Controls.MaterialLabel materialLabel6;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
-        private TextBox textBox2;
+        private TextBox txtTelefone;
         private MaterialSkin.Controls.MaterialLabel materialLabel9;
-        private TextBox textBox5;
+        private TextBox txtNumero;
         private MaterialSkin.Controls.MaterialLabel materialLabel12;
         private MaterialSkin.Controls.MaterialLabel materialLabel11;
-        private TextBox textBox8;
-        private TextBox textBox7;
+        private TextBox txtUf;
+        private TextBox txtCidade;
         private MaterialSkin.Controls.MaterialLabel materialLabel10;
-        private TextBox textBox6;
-        private MaterialSkin.Controls.MaterialButton materialButton1;
-        private Button btnRemover;
+        private TextBox txtCEP;
+        private MaterialSkin.Controls.MaterialButton btnSalvar;
+        private Button btnLimparCampos;
     }
 }

@@ -1,22 +1,22 @@
 ﻿namespace DesafioCRUD.Domain.Entities
 {
-    public abstract class Endereco
+    public class Endereco
     {
-        protected Endereco(string rua, string bairro, decimal cep, string cidade, string estado, string uf)
+        public Endereco(string rua, string bairro, string numero, string cep, string cidade, string uf)
         {
             Rua = rua;
             Bairro = bairro;
-            CEP = cep;
+            Numero = numero;
+            Cep = cep;
             Cidade = cidade;
-            Estado = estado;
-            UF = uf;
+            Uf = uf;
         }
 
-        protected string Rua { get; set; }
-        public string Bairro { get; set; }
-        public decimal CEP { get; set; }
-        public string Cidade { get; set; }
-        public string Estado { get; set; }
-        public string UF { get; set; }
+        public string Rua { get; private set; }
+        public string Bairro { get; private set; }
+        public string Numero { get; private set; }
+        public string Cep { get; private set; }
+        public string Cidade { get; private set; }
+        public string Uf { get; private set; }
     }
 }

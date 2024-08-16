@@ -7,5 +7,6 @@ namespace DesafioCRUD.Domain.Enums
         Masculino = 1,
         Feminino = 2,
         Outros = 3,
+        NaoInformado = 4,
     }
 }

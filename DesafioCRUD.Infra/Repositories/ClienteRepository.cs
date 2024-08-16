@@ -38,7 +38,11 @@ namespace DesafioCRUD.Infra.Repositories
 
         public void CadastraCliente(Cliente cliente)
         {
-            throw new NotImplementedException();
+            using (var conexao = new SqlConnection(_configuracoes.ConnectionString))
+            {
+                var sql = "INSERT INTO Cliente(CodigoCliente, NomeCliente, Telefone, DataNascimento, Sexo, Rua, Bairro, Cep, Cidade, Uf, id_EstadoCivil)VALUES(@CodigoCliente, @NomeCliente, @Telefone, @DataNascimento, @Sexo, @Rua, @Bairro, @Cep, @Cidade, @Uf, @IdEstadoCivil)";
+                conexao.Execute(sql, cliente);
+            }
         }
 
         public void AtualizarCadastroCliente(Cliente cliente)

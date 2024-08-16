@@ -1,4 +1,5 @@
-﻿using DesafioCRUD.Domain.Repositories;
+﻿using DesafioCRUD.Domain.Entities;
+using DesafioCRUD.Domain.Repositories;
 using DesafioCRUD.Domain.Results;
 using System.ComponentModel;
 
@@ -21,6 +22,20 @@ namespace DesafioCRUD.App.Services
                 _repository.DeletarCliente(codigoCliente);
 
                 return new ResultadoOperacao(mensagem: "Cliente deletado com sucesso.", sucesso: true);
+            }
+            catch (Exception ex)
+            {
+                return new ResultadoOperacao(mensagem: ex.Message, sucesso: false);
+            }
+        }
+
+        public ResultadoOperacao CadastrarCliente(Cliente cliente)
+        {
+            try
+            {
+                _repository.CadastraCliente(cliente);
+
+                return new ResultadoOperacao(mensagem: "Cliente cadastrado com sucesso.", sucesso: true);
             }
             catch (Exception ex)
             {
