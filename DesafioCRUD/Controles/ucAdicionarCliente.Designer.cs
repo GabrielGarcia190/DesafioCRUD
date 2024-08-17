@@ -166,7 +166,7 @@
             // 
             txtCidade.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtCidade.Location = new Point(292, 349);
-            txtCidade.MaxLength = 100;
+            txtCidade.MaxLength = 30;
             txtCidade.Name = "txtCidade";
             txtCidade.Size = new Size(166, 23);
             txtCidade.TabIndex = 20;
@@ -232,7 +232,7 @@
             // 
             txtBairro.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtBairro.Location = new Point(365, 286);
-            txtBairro.MaxLength = 100;
+            txtBairro.MaxLength = 30;
             txtBairro.Name = "txtBairro";
             txtBairro.Size = new Size(166, 23);
             txtBairro.TabIndex = 14;
@@ -254,7 +254,7 @@
             // 
             txtNomeRua.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtNomeRua.Location = new Point(21, 286);
-            txtNomeRua.MaxLength = 100;
+            txtNomeRua.MaxLength = 30;
             txtNomeRua.Name = "txtNomeRua";
             txtNomeRua.Size = new Size(321, 23);
             txtNomeRua.TabIndex = 12;
@@ -307,7 +307,7 @@
             // 
             txtTelefone.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtTelefone.Location = new Point(365, 110);
-            txtTelefone.MaxLength = 100;
+            txtTelefone.MaxLength = 10;
             txtTelefone.Name = "txtTelefone";
             txtTelefone.Size = new Size(166, 23);
             txtTelefone.TabIndex = 7;
@@ -377,7 +377,7 @@
             // 
             txtNome.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             txtNome.Location = new Point(21, 39);
-            txtNome.MaxLength = 100;
+            txtNome.MaxLength = 35;
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(321, 23);
             txtNome.TabIndex = 2;
