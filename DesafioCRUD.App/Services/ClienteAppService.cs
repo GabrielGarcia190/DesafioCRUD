@@ -1,4 +1,5 @@
 ﻿using DesafioCRUD.Domain.Entities;
+using DesafioCRUD.Domain.Filters;
 using DesafioCRUD.Domain.Repositories;
 using DesafioCRUD.Domain.Results;
 using System.ComponentModel;
@@ -14,6 +15,9 @@ namespace DesafioCRUD.App.Services
 
         public BindingList<ClienteCadastroResult> ObterClientes()
             => new BindingList<ClienteCadastroResult>(_repository.ObterClientes().ToList());
+
+        public BindingList<ClienteCadastroResult> ObterClientesFiltrados(ClienteCadastroFilter filter)
+            => new BindingList<ClienteCadastroResult>(_repository.ObterClientesFitlrados(filter));
 
         public ResultadoOperacao EliminarCliente(Guid codigoCliente)
         {
@@ -42,5 +46,8 @@ namespace DesafioCRUD.App.Services
                 return new ResultadoOperacao(mensagem: ex.Message, sucesso: false);
             }
         }
+
+        public ClienteCompletoResult? ObterClientePorCodigoCliente(Guid codigoCliente)
+            => _repository.ObterClientePorId(codigoCliente);
     }
 }

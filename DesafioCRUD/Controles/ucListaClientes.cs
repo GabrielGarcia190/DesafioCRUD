@@ -1,4 +1,7 @@
 ﻿using DesafioCRUD.App.Services;
+using DesafioCRUD.Domain.Enums;
+using DesafioCRUD.Domain.Filters;
+using DesafioCRUD.Domain.Helpers;
 using DesafioCRUD.Domain.Results;
 using DesafioCRUD.Ioc;
 using Ninject;
@@ -18,6 +21,7 @@ namespace DesafioCRUD.Controles
         {
             _clientes = _servico.ObterClientes();
             gvClientes.DataSource = _clientes;
+            PreencherComboBoxHelper.PreencherComboComEnum<ETipoFiltro>(cbFiltro);
         }
 
         private void btnRemover_Click(object sender, EventArgs e)
@@ -51,11 +55,28 @@ namespace DesafioCRUD.Controles
         private void btnAtualizar_Click(object sender, EventArgs e)
         {
             var clientesAtualizados = _servico.ObterClientes();
+
+            AtualizarClientes(clientesAtualizados);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            var textoBuscar = txtBuscar.Text;
+            ETipoFiltro tipoFiltro = (ETipoFiltro)cbFiltro.SelectedIndex;
+
+            var filtro = new ClienteCadastroFilter(tipoFiltro, textoBuscar);
+
+            var clientesFiltrados = _servico.ObterClientesFiltrados(filtro);
+
+            AtualizarClientes(clientesFiltrados);
+        }
+
+        private void AtualizarClientes(BindingList<ClienteCadastroResult> clientes) 
+        {
             _clientes?.Clear();
 
-            foreach (var cliente in clientesAtualizados)
+            foreach (var cliente in clientes)
                 _clientes?.Add(cliente);
-
         }
     }
 }

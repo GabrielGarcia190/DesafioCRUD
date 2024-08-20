@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             panel1 = new Panel();
+            cbFiltro = new ComboBox();
+            btnBuscar = new Button();
+            txtBuscar = new TextBox();
             btnRemover = new Button();
             btnAtualizar = new MaterialSkin.Controls.MaterialButton();
             gvClientes = new DataGridView();
@@ -46,14 +49,44 @@
             // panel1
             // 
             panel1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            panel1.Controls.Add(cbFiltro);
+            panel1.Controls.Add(btnBuscar);
+            panel1.Controls.Add(txtBuscar);
             panel1.Controls.Add(btnRemover);
             panel1.Controls.Add(btnAtualizar);
             panel1.Controls.Add(gvClientes);
             panel1.Controls.Add(materialButton1);
             panel1.Location = new Point(3, 12);
             panel1.Name = "panel1";
-            panel1.Size = new Size(2221, 1338);
+            panel1.Size = new Size(2829, 1740);
             panel1.TabIndex = 0;
+            // 
+            // cbFiltro
+            // 
+            cbFiltro.FormattingEnabled = true;
+            cbFiltro.Location = new Point(3, 3);
+            cbFiltro.Name = "cbFiltro";
+            cbFiltro.Size = new Size(81, 23);
+            cbFiltro.TabIndex = 6;
+            cbFiltro.Text = "FILTRO";
+            // 
+            // btnBuscar
+            // 
+            btnBuscar.BackColor = SystemColors.Control;
+            btnBuscar.Location = new Point(488, 2);
+            btnBuscar.Name = "btnBuscar";
+            btnBuscar.Size = new Size(68, 24);
+            btnBuscar.TabIndex = 5;
+            btnBuscar.Text = "BUSCAR";
+            btnBuscar.UseVisualStyleBackColor = false;
+            btnBuscar.Click += btnBuscar_Click;
+            // 
+            // txtBuscar
+            // 
+            txtBuscar.Location = new Point(90, 3);
+            txtBuscar.Name = "txtBuscar";
+            txtBuscar.Size = new Size(392, 23);
+            txtBuscar.TabIndex = 4;
             // 
             // btnRemover
             // 
@@ -97,13 +130,13 @@
             gvClientes.BackgroundColor = SystemColors.Control;
             gvClientes.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             gvClientes.Columns.AddRange(new DataGridViewColumn[] { NomeCliente, DataNascimento, Cidade, Idade, UF, CodigoCliente });
-            gvClientes.Location = new Point(3, 0);
+            gvClientes.Location = new Point(3, 32);
             gvClientes.MultiSelect = false;
             gvClientes.Name = "gvClientes";
             gvClientes.ReadOnly = true;
             gvClientes.RowTemplate.Height = 25;
             gvClientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            gvClientes.Size = new Size(553, 458);
+            gvClientes.Size = new Size(553, 426);
             gvClientes.TabIndex = 1;
             // 
             // NomeCliente
@@ -201,5 +234,8 @@
         private DataGridViewTextBoxColumn Idade;
         private DataGridViewTextBoxColumn UF;
         private DataGridViewTextBoxColumn CodigoCliente;
+        private ComboBox cbFiltro;
+        private Button btnBuscar;
+        private TextBox txtBuscar;
     }
 }
